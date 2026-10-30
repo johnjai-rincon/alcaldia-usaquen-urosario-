@@ -1,0 +1,564 @@
+<section class="seccion-oferta">
+    <div class="container text-center">
+        <h2 class="titulo-oferta">Oferta Académica</h2>
+        <p class="texto-oferta">Aprovecha la oportunidad de formarte con la excelencia de la URosario sin salir de tu
+            zona. Consulta los 18 cursos y talleres de nuestra oferta e inicia tu proceso de inscripción hoy
+            mismo.</p>
+        <p><a class="btn-inscripcion-general" href="#hubspot-form-section">Inscríbete a cualquiera de nuestros
+                programas</a></p>
+        <!-- Buscador -->
+        <div class="buscador-oferta">
+            <i class="fas fa-search icono-buscar"></i>
+            <input type="text" id="buscadorCursos" placeholder="Buscar por nombre o tema del programa...">
+            <button class="btn-limpiar-busqueda" id="btnLimpiar" title="Limpiar búsqueda"><i
+                    class="fas fa-times"></i></button>
+        </div>
+        <!-- Filtros: curso vs taller -->
+        <div class="filtros-oferta" id="filtrosOferta">
+            <button class="chip-filtro activo" data-filtro="todos">Todos <span class="chip-count"
+                    id="countTodos">18</span></button>
+            <button class="chip-filtro" data-filtro="curso"><i class="fas fa-graduation-cap"></i> Cursos <span
+                    class="chip-count" id="countCurso">12</span></button>
+            <button class="chip-filtro" data-filtro="taller"><i class="fas fa-screwdriver-wrench"></i> Talleres <span
+                    class="chip-count" id="countTaller">6</span></button>
+        </div>
+        <!-- Contador -->
+        <div class="contador-resultados" id="contadorResultados">Mostrando <strong>18</strong> de
+            <strong>18</strong> programas</div>
+        <!-- Sin resultados -->
+        <div class="sin-resultados" id="sinResultados"><i class="fas fa-search"></i>No se encontraron programas con ese
+            criterio. Intenta con otra palabra clave.</div>
+        <div class="contenedor-oferta">
+            <div class="grid-cards" id="gridContainer">
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="costos presupuestos branding marca finanzas precios margen punto de equilibrio inteligencia artificial ia habilidades empresariales">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual son gráficos de precios abstractos; esta muestra a un pequeño negocio haciendo cuentas)
+                                 https://www.shutterstock.com/es/image-photo/business-owners-press-calculator-manage-check-2266010663
+                                 nuevo src: /sites/default/files/2026-10/curso-costos-presupuestos-y-branding-con-ia.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-contables-y-financieras-para-la-gestion-de-recursos.webp"
+                                alt="Costos, presupuestos y branding con IA: habilidades para gestionar tu negocio" width="400" height="267">
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Costos, presupuestos y branding con IA: habilidades para gestionar tu negocio</h3>
+                            <p class="card-curso-enfasis">Costos y presupuestos; branding con uso de inteligencia artificial</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="proveedores compras abastecimiento negociacion acuerdos contratos comunicacion reuniones seguimiento">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual es genérica de estrategia; esta muestra la conversación con el proveedor en bodega)
+                                 https://www.shutterstock.com/es/image-photo/conversation-logistics-smile-people-warehouse-together-2846100735
+                                 nuevo src: /sites/default/files/2026-10/curso-comunicacion-efectiva-con-proveedores.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-comunicacion-estrategica-en-proyectos-y-organizaciones.webp"
+                                alt="Comunicación efectiva con proveedores: negociación y acuerdos profesionales" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Comunicación efectiva con proveedores: negociación y acuerdos profesionales</h3>
+                            <p class="card-curso-enfasis">Técnicas de comunicación con proveedores</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="datos analitica analisis negocios decisiones indicadores kpi tablero dashboard informacion evidencia">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-analitica-de-datos-y-toma-de-decisiones.webp"
+                                alt="Analítica de datos para negocios: interpreta información y toma mejores decisiones" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Analítica de datos para negocios: interpreta información y toma mejores decisiones</h3>
+                            <p class="card-curso-enfasis">Aplicada a negocios</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="servicio al cliente atencion usuario asertividad quejas reclamos fidelizacion experiencia satisfaccion">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-servicio-y-orientacion-al-cliente-en-puntos-de-atencion.webp"
+                                alt="Servicio al cliente y comunicación asertiva: atiende, resuelve y fideliza" width="400" height="267">
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Servicio al cliente y comunicación asertiva: atiende, resuelve y fideliza</h3>
+                            <p class="card-curso-enfasis">Servicio al cliente y comunicación asertiva</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="turismo turistico turisticos paquetes hoteles hoteleria agencias de viajes destino experiencias alianzas guianza">
+                        <div class="card-curso-img-wrapper">
+                            <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/happy-couple-discussing-vacation-package-travel-2629017001
+                                 <img class="card-curso-img" src="/sites/default/files/2026-10/curso-diseno-y-comercializacion-de-paquetes-turisticos.webp"
+                                      alt="Diseño y comercialización de paquetes turísticos: crea experiencias y alianzas" width="400" height="267"> -->
+                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Diseño y comercialización de paquetes turísticos: crea experiencias y alianzas</h3>
+                            <p class="card-curso-enfasis">Fomento de alianzas con el sector hotelero y agencias de viajes</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="innovacion emprendimiento ia inteligencia artificial generativa prototipo startup modelo de negocio oportunidades">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-emprendimiento-y-diseño-de-modelos-de-negocio.webp"
+                                alt="Innovación y emprendimiento con IA: identifica oportunidades y desarrolla soluciones" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Innovación y emprendimiento con IA: identifica oportunidades y desarrolla soluciones</h3>
+                            <p class="card-curso-enfasis">Inteligencia artificial, innovación y emprendimiento</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="negociacion negociaciones acuerdos argumentacion objeciones cierre comercial empresarial intereses">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual es una imagen conceptual de rivalidad; esta muestra una negociación real)
+                                 https://www.shutterstock.com/es/image-photo/middle-aged-caucasian-woman-man-discussing-2656171165
+                                 nuevo src: /sites/default/files/2026-10/curso-negociacion-empresarial-efectiva.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-toma-de-decisiones-en-entornos-organizacionales_0.webp"
+                                alt="Negociación empresarial efectiva: prepara, argumenta y logra acuerdos" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Negociación empresarial efectiva: prepara, argumenta y logra acuerdos</h3>
+                            <p class="card-curso-enfasis">Negociaciones empresariales</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="marketing redes sociales podcast pod cast contenido video community manager publicaciones audiencia difusion">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual no muestra el pódcast, que es la mitad del taller)
+                                 https://www.shutterstock.com/es/image-photo/content-creator-recording-podcast-wearing-headphones-2627592147
+                                 nuevo src: /sites/default/files/2026-10/curso-marketing-en-redes-sociales-y-podcast.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-comerciales-manejo-de-redes-sociales-para-la-gestion-comercial-y-relacionamiento-con-clientes.webp"
+                                alt="Marketing en redes sociales y pódcast: crea contenido que conecta y promociona" width="400" height="267">
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Marketing en redes sociales y pódcast: crea contenido que conecta y promociona</h3>
+                            <p class="card-curso-enfasis">Marketing digital y promoción de redes sociales y podcast</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="invima registro sanitario tramites normatividad etiquetado trazabilidad expediente comercializacion productos alimentos">
+                        <div class="card-curso-img-wrapper">
+                            <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/quality-control-technician-using-tablet-canned-2749164391
+                                 <img class="card-curso-img" src="/sites/default/files/2026-10/curso-gestion-de-tramites-ante-invima.webp"
+                                      alt="Gestión de trámites ante INVIMA: prepara requisitos para comercializar productos" width="400" height="267"> -->
+                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Gestión de trámites ante INVIMA: prepara requisitos para comercializar productos</h3>
+                            <p class="card-curso-enfasis">Obtención de registros INVIMA</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="seguridad alimentaria alimentos inocuidad higiene manipulacion toxicologia contaminacion temperaturas salud bpm">
+                        <div class="card-curso-img-wrapper">
+                            <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/woman-cuts-pineapple-safety-glove-food-2608514293
+                                 <img class="card-curso-img" src="/sites/default/files/2026-10/curso-seguridad-alimentaria-en-la-practica.webp"
+                                      alt="Seguridad alimentaria en la práctica: manipula, previene riesgos y elabora alimentos seguros" width="400" height="267"> -->
+                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Seguridad alimentaria en la práctica: manipula, previene riesgos y elabora alimentos seguros</h3>
+                            <p class="card-curso-enfasis">Higiene y manipulación de alimentos; toxicología y seguridad alimentaria; políticas de seguridad; elaboración de alimentos saludables</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="datos analitica analisis visualizacion graficas excel power bi limpieza organizacion informacion hallazgos">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-excel-avanzado-para-gestion-y-control-de-informacion.webp"
+                                alt="Analítica de datos aplicada: organiza, visualiza e interpreta información" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Analítica de datos aplicada: organiza, visualiza e interpreta información</h3>
+                            <p class="card-curso-enfasis">Analítica de datos</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="inteligencia artificial ia generativa gemini claude chatgpt copilot prompts herramientas productividad automatizacion">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-herramientas-de-inteligencia-artificial-para-la-gestion-organizacional.webp"
+                                alt="Herramientas de IA para el trabajo: usa Gemini y Claude con criterio y productividad" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Herramientas de IA para el trabajo: usa Gemini y Claude con criterio y productividad</h3>
+                            <p class="card-curso-enfasis">Gemini, Cloude, entre otros</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="empleo empleabilidad trabajo hoja de vida cv curriculum perfil profesional entrevista linkedin postulacion busqueda de empleo">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual muestra al reclutador; el curso es para el candidato)
+                                 https://www.shutterstock.com/es/image-photo/woman-searches-job-on-laptop-kitchen-4204595281
+                                 nuevo src: /sites/default/files/2026-10/curso-empleabilidad-digital-con-ia.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-introduccion-a-la-reforma-laboral-y-actualizacion-basica.webp"
+                                alt="Empleabilidad digital con IA: construye y comunica tu perfil profesional" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Empleabilidad digital con IA: construye y comunica tu perfil profesional</h3>
+                            <p class="card-curso-enfasis">Generación de perfiles profesionales</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="ventas comercial vender clientes cierre embudo emprendimiento negocio propuesta de valor canales">
+                        <div class="card-curso-img-wrapper">
+                            <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/salesman-wearing-apron-engaging-customer-while-2662678941
+                                 <img class="card-curso-img" src="/sites/default/files/2026-10/curso-ventas-efectivas-para-emprendimientos.webp"
+                                      alt="Ventas efectivas para emprendimientos: conecta con clientes y cierra negocios" width="400" height="267"> -->
+                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Ventas efectivas para emprendimientos: conecta con clientes y cierra negocios</h3>
+                            <p class="card-curso-enfasis">Ventas de productos y servicios</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="mercados mercadeo mipymes pymes segmentacion demanda crecimiento economias de escala marketing digital analitica">
+                        <div class="card-curso-img-wrapper">
+                            <!-- REEMPLAZO SUGERIDO (la actual habla de hoja de cálculo, no de análisis de mercado)
+                                 https://www.shutterstock.com/es/image-photo/business-team-reviewing-printed-charts-graphs-2837320341
+                                 nuevo src: /sites/default/files/2026-10/curso-analitica-de-mercados-para-mipymes.webp -->
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-excel-Intermedio-para-seguimiento-de-procesos.webp"
+                                alt="Analítica de mercados para mipymes: identifica oportunidades y fortalece tu estrategia digital" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Analítica de mercados para mipymes: identifica oportunidades y fortalece tu estrategia digital</h3>
+                            <p class="card-curso-enfasis">Implementación de economías de escala y fortalecimiento a pymes y mipymes que incluya marketing digital</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="taller"
+                        data-keywords="negociacion internacional exportacion importacion incoterms comercio exterior mercados cultura acuerdos multiactor">
+                        <div class="card-curso-img-wrapper">
+                            <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/diverse-group-colleagues-celebrates-new-partnership-2604023695
+                                 <img class="card-curso-img" src="/sites/default/files/2026-10/curso-negociacion-comercial-local-e-internacional.webp"
+                                      alt="Negociación comercial local e internacional: desarrolla acuerdos en distintos mercados" width="400" height="267"> -->
+                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <span class="badge-modalidad badge-taller">Taller</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Negociación comercial local e internacional: desarrolla acuerdos en distintos mercados</h3>
+                            <p class="card-curso-enfasis">En un entorno local, nacional e internacional</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">8 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="proyectos programas gerencia gestion indicadores seguimiento riesgos recursos pmbok tablero de control analitica">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-analitica-de-datos-aplicada-a-la-gerencia-de-programas-y-proyectos.webp"
+                                alt="Analítica de datos para gestionar proyectos: monitorea indicadores y mejora decisiones" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Analítica de datos para gestionar proyectos: monitorea indicadores y mejora decisiones</h3>
+                            <p class="card-curso-enfasis">Curso de analítica de datos aplicada a la gerencia de programas y proyectos</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card card-curso" data-tipo="curso"
+                        data-keywords="marketing digital campanas campanas publicitarias publicidad conversiones metricas analitica seo contenidos canales">
+                        <div class="card-curso-img-wrapper">
+                            <img class="card-curso-img" src="/sites/default/files/2026-02/curso-marketing-digital-con-enfoque-en-productos-y-servicios.webp"
+                                alt="Marketing digital aplicado: planifica campañas, atrae clientes y mide resultados" width="400" height="267">
+                            <span class="badge-modalidad badge-curso">Curso</span>
+                        </div>
+                        <div class="card-curso-body">
+                            <h3 class="card-curso-titulo">Marketing digital aplicado: planifica campañas, atrae clientes y mide resultados</h3>
+                            <p class="card-curso-enfasis">Marketing digital</p>
+                            <ul class="detalles-curso">
+                                <li class="li-sesiones">12 sesiones</li>
+                                <li class="li-remoto">Modalidad por definir</li>
+                                <li class="li-fecha">Fechas por definir</li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        <!-- Ver más -->
+        <div class="contenedor-ver-mas">
+            <button class="btn-ver-mas" id="btnVerMas"><span>Ver todos los programas</span> <i
+                    class="fas fa-chevron-down"></i></button>
+        </div>
+    </div>
+    <p class="nota-pie">
+        *Sujeto a términos y condiciones, así como a la disponibilidad y al cumplimiento del cupo mínimo.<br>
+        Aplica un máximo de 1 curso por participante. Es necesario presentar soporte del recibo de servicio público o
+        soporte de vínculo con la localidad (trabajo, comercio, empresa).<br>
+        La Universidad del Rosario, entregará a los estudiantes, un certificado académico siempre y cuando se asista
+        como mínimo al 80% de las horas de capacitación programadas.
+    </p>
+</section>
+
+<script>
+    (function () {
+        'use strict';
+
+        var CARDS_INICIAL = 3;
+
+        var buscador = document.getElementById('buscadorCursos');
+        var btnLimpiar = document.getElementById('btnLimpiar');
+        var contadorEl = document.getElementById('contadorResultados');
+        var sinResultados = document.getElementById('sinResultados');
+        var btnVerMas = document.getElementById('btnVerMas');
+        var gridContainer = document.getElementById('gridContainer');
+        var chips = document.querySelectorAll('.chip-filtro');
+        var countTodosEl = document.getElementById('countTodos');
+        var countCursoEl = document.getElementById('countCurso');
+        var countTallerEl = document.getElementById('countTaller');
+
+        var filtroActivo = 'todos';
+        var textoBusqueda = '';
+        var expandido = false;
+
+        function getCards() {
+            return Array.prototype.slice.call(gridContainer.querySelectorAll('.card-curso'));
+        }
+
+        function normalizar(str) {
+            return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+        }
+
+        /* Busca en el titulo, el enfasis y las palabras clave de la tarjeta,
+           para que terminos del tema (ej. "turismo" cuando el titulo dice
+           "turisticos") tambien encuentren el programa. */
+        function textoDe(card) {
+            var t = card.querySelector('.card-curso-titulo');
+            var d = card.querySelector('.card-curso-enfasis');
+            return normalizar((t ? t.textContent : '') + ' ' +
+                (d ? d.textContent : '') + ' ' +
+                (card.getAttribute('data-keywords') || ''));
+        }
+
+        function pasaBusqueda(card) {
+            return textoBusqueda === '' ||
+                textoDe(card).indexOf(normalizar(textoBusqueda)) !== -1;
+        }
+
+        function cumpleCriterios(card) {
+            var tipo = card.getAttribute('data-tipo') || '';
+            var pasaFiltro = (filtroActivo === 'todos') || (tipo === filtroActivo);
+            return pasaFiltro && pasaBusqueda(card);
+        }
+
+        function actualizarContadores() {
+            var total = 0, curso = 0, taller = 0;
+            getCards().forEach(function (card) {
+                if (!pasaBusqueda(card)) return;
+                total++;
+                var tipo = card.getAttribute('data-tipo') || '';
+                if (tipo === 'curso') curso++;
+                if (tipo === 'taller') taller++;
+            });
+            if (countTodosEl) countTodosEl.textContent = total;
+            if (countCursoEl) countCursoEl.textContent = curso;
+            if (countTallerEl) countTallerEl.textContent = taller;
+        }
+
+        function renderizar() {
+            var cards = getCards();
+            var visibles = cards.filter(cumpleCriterios);
+            var limite = expandido ? visibles.length : CARDS_INICIAL;
+
+            cards.forEach(function (card) {
+                card.classList.add('oculta-grid');
+                card.classList.remove('visible');
+            });
+
+            visibles.slice(0, limite).forEach(function (card, idx) {
+                card.classList.remove('oculta-grid');
+                setTimeout(function () { card.classList.add('visible'); }, idx * 55);
+            });
+
+            var mostrando = Math.min(visibles.length, limite);
+            if (contadorEl) {
+                contadorEl.innerHTML =
+                    'Mostrando <strong>' + mostrando + '</strong> de <strong>' +
+                    visibles.length + '</strong> programa' +
+                    (visibles.length !== 1 ? 's' : '');
+            }
+            if (sinResultados) {
+                sinResultados.style.display = visibles.length === 0 ? 'block' : 'none';
+            }
+            if (btnVerMas) {
+                if (visibles.length <= CARDS_INICIAL) {
+                    btnVerMas.style.display = 'none';
+                } else {
+                    btnVerMas.style.display = 'inline-flex';
+                    var sp = btnVerMas.querySelector('span');
+                    if (expandido) {
+                        if (sp) sp.textContent = 'Ver menos programas';
+                        btnVerMas.classList.add('expandido');
+                    } else {
+                        if (sp) sp.textContent = 'Ver todos los programas';
+                        btnVerMas.classList.remove('expandido');
+                    }
+                }
+            }
+            actualizarContadores();
+        }
+
+        chips.forEach(function (chip) {
+            chip.addEventListener('click', function () {
+                chips.forEach(function (c) { c.classList.remove('activo'); });
+                chip.classList.add('activo');
+                filtroActivo = chip.getAttribute('data-filtro') || 'todos';
+                expandido = false;
+                renderizar();
+            });
+        });
+
+        if (buscador) {
+            buscador.addEventListener('input', function () {
+                textoBusqueda = buscador.value.trim();
+                expandido = false;
+                if (btnLimpiar)
+                    btnLimpiar.classList.toggle('visible', textoBusqueda.length > 0);
+                renderizar();
+            });
+        }
+
+        if (btnLimpiar) {
+            btnLimpiar.addEventListener('click', function () {
+                if (buscador) buscador.value = '';
+                textoBusqueda = '';
+                btnLimpiar.classList.remove('visible');
+                expandido = false;
+                renderizar();
+            });
+        }
+
+        if (btnVerMas) {
+            btnVerMas.addEventListener('click', function () {
+                expandido = !expandido;
+                renderizar();
+                if (!expandido && gridContainer)
+                    gridContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        }
+
+        /* Drupal agrega clase .lazyload con opacity:0 a todas las imagenes.
+           Esta funcion elimina esa clase y restaura src si fue convertido a data-src. */
+        function cargarImagenes() {
+            var section = document.querySelector('.seccion-oferta');
+            if (!section) return;
+            section.querySelectorAll('img.card-curso-img').forEach(function (img) {
+                var realSrc = img.getAttribute('data-src');
+                if (realSrc) {
+                    img.setAttribute('src', realSrc);
+                    img.removeAttribute('data-src');
+                }
+                img.classList.remove('lazyload');
+                img.classList.add('lazyloaded');
+            });
+        }
+
+        function init() {
+            if (!gridContainer) {
+                console.warn('Oferta Alcaldia: no se encontro #gridContainer');
+                return;
+            }
+            cargarImagenes();
+            gridContainer.classList.add('js-oferta-activa');
+            actualizarContadores();
+            renderizar();
+        }
+
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', init);
+        } else {
+            init();
+        }
+    })();
+</script>

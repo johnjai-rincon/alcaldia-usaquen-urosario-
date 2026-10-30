@@ -1,0 +1,10 @@
+# Artefactos de Windows, OneDrive y Office
+desktop.ini
+Thumbs.db
+.DS_Store
+~$*
+*.tmp
+
+# Vistas previas y archivos de trabajo locales
+preview.html
+_script_oferta.js

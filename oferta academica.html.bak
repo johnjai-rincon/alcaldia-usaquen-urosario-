@@ -1,0 +1,735 @@
+<section class="seccion-oferta">
+    <div class="container text-center">
+        <h2 class="titulo-oferta">Oferta Académica</h2>
+        <p class="texto-oferta">Aprovecha la oportunidad de formarte con la excelencia de la URosario sin salir de tu zona. Consulta los programas de nuestra oferta, descarga el plan de estudios e inicia tu proceso de inscripción hoy mismo.</p>
+        <p><a class="btn-inscripcion-general" href="#hubspot-form-section">Inscríbete a cualquiera de nuestros programas</a></p>
+        <!-- Buscador -->
+        <div class="buscador-oferta">
+            <i class="fas fa-search icono-buscar"></i>
+            <input type="text" id="buscadorCursos" placeholder="Buscar por nombre del programa...">
+            <button class="btn-limpiar-busqueda" id="btnLimpiar" title="Limpiar búsqueda"><i class="fas fa-times"></i></button>
+        </div>
+        <!-- Filtros -->
+        <div class="filtros-oferta" id="filtrosOferta">
+            <button class="chip-filtro activo" data-filtro="todos">Todos <span class="chip-count" id="countTodos">20</span></button>
+            <button class="chip-filtro" data-filtro="presencial"><i class="fas fa-building"></i> Presencial <span class="chip-count" id="countPresencial">0</span></button>
+            <button class="chip-filtro" data-filtro="remoto"><i class="fas fa-laptop-house"></i> Acceso remoto <span class="chip-count" id="countRemoto">0</span></button>
+        </div>
+        <!-- Contador -->
+        <div class="contador-resultados" id="contadorResultados">Mostrando <strong>20</strong> de <strong>20</strong> programas</div>
+        <!-- Sin resultados -->
+        <div class="sin-resultados" id="sinResultados"><i class="fas fa-search"></i>No se encontraron programas con ese criterio. Intenta con otra palabra clave.</div>
+        <div class="contenedor-oferta">
+            <div class="grid-cards" id="gridContainer">
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-02" data-fin="2026-03-20">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-de-comunicacion-escrita-y-estrategica-para-entornos-laborales.webp" alt="Habilidades de Comunicación Escrita y Estratégica para Entornos laborales" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Habilidades de Comunicación Escrita y Estratégica para Entornos laborales
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e442ac8a448f717b7ba285252ed327169">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e8e326e300f88e9a076cbd01b3089d2c1">
+                                Lunes, miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e94d8f7180230ff874493461617afec5a">
+                                Del 2 al 20 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-habilidades-de-comunicacion-escrita-y-estrategica-para-entornos-laborales_1.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-02" data-fin="2026-03-20">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-excel-Intermedio-para-seguimiento-de-procesos.webp" alt="Excel Intermedio para Seguimiento de Procesos" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Excel Intermedio para Seguimiento de Procesos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e5c26568d35630a8627a820ef413f50be">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e7c791afabb5e2a138186eba70ea971b2">
+                                Lunes, miércoles y viernes 17:00 a 19:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e7f6f90637d51851d2c6ad9c9c87f0ea1">
+                                Del 2 al 20 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-excel-intermedio-para-seguimiento-de-procesos.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-02" data-fin="2026-03-20">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-comunicacion-estrategica-en-proyectos-y-organizaciones.webp" alt="Comunicación Estratégica en Proyectos y Organizaciones" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Comunicación Estratégica en Proyectos y Organizaciones
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e1b65bb7f39f4290c136cc1583b7c3b13">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ee533488f657631c58a20042d700a419e">
+                                Lunes, miércoles y viernes 7:00 p.m a 9:00 p.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ea2d02ec329251b175cf1754a63d7a23a">
+                                Del 2 al 20 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-comunicacion-estrategica-en-proyectos-y-organizaciones.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-02" data-fin="2026-03-20">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-herramientas-de-inteligencia-artificial-para-la-gestion-organizacional.webp" alt="Herramientas de Inteligencia Artificial para la Gestión Organizacional" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Herramientas de Inteligencia Artificial para la Gestión Organizacional
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="ecc4e4edb4fb2e40a634e37d3d7a4f3dc">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ec90436e83d7102c6c2030b3f9fa2f602">
+                                Lunes, miércoles y viernes 18:00 a 20:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e7b288c974b3db5cbb5e08a4c00f250bc">
+                                Del 2 al 20 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-herramientas-de-inteligencia-artificial-para-la-gestion-organizacional.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-03" data-fin="2026-04-07">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-sobre-gestion-de-inversion.webp" alt="Gestión de Inventarios" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Gestión de Inventarios
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e9518ac2dcbf702d51df121872413a912">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e5bfa21074c77e7397383a1f636fc4131">
+                                Martes y jueves 18:00 a 20:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e9e0373fabaf78ca5a1ceec2e8cf69dc8">
+                                Del 3 de marzo al 7 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-gestion-de-inventarios.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 7 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-03" data-fin="2026-04-07">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-introduccion-a-la-reforma-laboral-y-actualizacion-basica.webp" alt="Curso 5" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Introducción a la Reforma laboral y Actualización Básica
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e9b835209b7f2dd812e8934943b8473f2">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e1f2bd8722c5570bd16f1e932a3b72339">
+                                Martes y jueves 15:00 a 17:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e86b740c1b1ba92e290b5910051cce466">
+                                Del 3 de marzo al 7 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-introduccion-a-la-reforma-laboral-y-actualizacion-basica.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 8 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-04" data-fin="2026-03-2">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-excel-avanzado-para-gestion-y-control-de-informacion.webp" alt="Excel Avanzado para Gestión y Control de Información" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Excel Avanzado para Gestión y Control de Información
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e12ffe1da1831bb443d4fe2fd9f6cb46d">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ed2fe9177a3dfb0c09b9ecfcff9793de8">
+                                Miércoles y viernes 7:00 a.m a 10:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="eea9dda918360f136908c9379be00a16b">
+                                Del 4 al 20 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-excel-avanzado-para-gestion-y-control-de-informacion_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 9 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-03" data-fin="2026-04-07">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-analitica-de-datos-y-toma-de-decisiones.webp" alt="Analítica de Datos y Toma de Decisiones" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Analítica de Datos y Toma de Decisiones
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="eb9b2f444954f1801908df384e7d7521e">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e035a983770e3f27b516a322db89b7c21">
+                                Martes y jueves 19:00 a 21:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ed0e30318f819378f12c6fc049f36e4af">
+                                Del 3 de marzo al 7 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-analitica-de-datos-y-toma-de-decisiones_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 10 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-07" data-fin="2026-04-18">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-analitica-de-datos-aplicada-a-la-gerencia-de-programas-y-proyectos.webp" alt="Curso Analítica de Datos Aplicada a la Gerencia de Programas y Proyectos" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Analítica de Datos Aplicada a la Gerencia de Programas y Proyectos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e5c2d7e38e24c511f46430a20bfac092b">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e2a0d48b453bc3dd38b57b89ec2697bc8">
+                                Sábados de 8:00 a.m a 11:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e209660b1217b01dc6117cf69bc72951f">
+                                Del 7 de marzo al 18 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-analitica-de-datos-aplicada-a-programas-y-proyectos.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-07" data-fin="2026-04-18">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-herramientas-digitales-para-el-trabajo-Ia-web-y-manejo-de-datos.webp" alt="Herramientas Digitales para el Trabajo: IA, Web y Manejo de Datos" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Herramientas Digitales para el Trabajo: IA, Web y Manejo de Datos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e9e8ab90bd7f1398c7c10812253111900">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e53e2f049d5ec530490f3c6a5ef33098c">
+                                Sábado 8:00 a.m a 11:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e19bb4358f272f181c7dc488bd2c3fa0f">
+                                Del 7 de marzo al 18 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-herramientas-digitales-para-el%20trabajo-ia-web-y-manejo-de-datos.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 11
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-07" data-fin="2026-04-18">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-logistica-administrativa-y-manejo-de-procesos-internos.webp" alt="Logística Administrativa y Manejo de Procesos Internos" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Logística Administrativa y Manejo de Procesos Internos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e64e43b5acd2cb28088a087fa2722a421">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e55d192a05c62f47f34ece6df11cdf9fc">
+                                Sábado 8:00 a.m a 11:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ec70e86c9644d969eb6022ee357e8e7be">
+                                Del 7 de marzo al 18 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-logistica-administrativa-y-manejo-de-procesos-internos_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Card 12
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-20" data-fin="2026-04-24">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-resolucion-de-problemas-complejos-y-pensamiento-critico-aplicado.webp" alt="Resolución de Problemas Complejos y Pensamiento Crítico Aplicado" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Resolución de Problemas Complejos y Pensamiento Crítico Aplicado
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="ee0816692f6a0d85ffbcfeb14de3c78b1">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e41df57542cf54d406aaaf2dccbebf50c">
+                                Miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e5664b27b44e9f39b738be23e03eb46b1">
+                                Del 20 de marzo al 24 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-resolucion-de-problemas-complejos-y-pensamiento-critico-aplicado.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Card 13 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-09" data-fin="2026-04-06">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-recursos-humanos-practicas-para-la-gestion-eficaz-de-personas.webp" alt="Recursos Humanos: Prácticas para la Gestión Eficaz de Personas" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Recursos Humanos: Prácticas para la Gestión Eficaz de Personas
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e56dd1b805f48d9e80afa0b5669480732">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e9e0aac7093aacebe22b13fc32f41b841">
+                                Lunes, miércoles y viernes 17:00 a 19:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e881544ebb07aff6f64b431d1088c8788">
+                                Del 9 de marzo al 6 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-recursos-humanos-practicas-para-la-gestion-eficaz-de-personas.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 14 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-09" data-fin="2026-04-06">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-actualizacion-tributaria-organizacional-para-la-toma-de-decisiones.webp" alt="Actualización Tributaria Organizacional para la Toma de Decisiones" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Actualización Tributaria Organizacional para la Toma de Decisiones
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e6b77ffc4cff501f30ecdd797007f6961">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="eec98d72239e43e4d2c316ca6d8565272">
+                                Lunes, miércoles y viernes 18:00 a 20:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ec64d49cb2df7804ec6aef7136b9ee590">
+                                Del 9 de marzo al 6 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-en-actualizacion-tributaria-organizacional-para-toma-de-decisiones.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 14 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-10" data-fin="2026-04-14">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-programacion-de-aplicaciones-basicas-para-la-gestion-y-el-servicio.webp" alt="Programación de Aplicaciones Básicas para la Gestión y el Servicio" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Programación de Aplicaciones Básicas para la Gestión y el Servicio
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e7f1209550859c4d4225f44113dbf4fc5">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e80f2ac562084c033ffc13637f6d4b421">
+                                Martes y jueves 17:00 a 19:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e375049602b4283432bfca03781488780">
+                                Del 10 de marzo al 14 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-de-programacion-de-aplicaciones-basicas-para-la-gestion-y-el-servicio.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 15 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-11" data-fin="2026-04-15">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-inteligencia-artificial-aplicada-a-tareas-administrativas.webp" alt="Inteligencia Artificial Aplicada a Tareas Administrativas" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Inteligencia Artificial Aplicada a Tareas Administrativas
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e30805edbf983196e62bc3188c7a8041c">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e1f4b9c5e438357241d754425b0950eaf">
+                                Miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e667f75eef2ae9b7dba14cb7683bef1db">
+                                Del 11 de marzo al 15 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-inteligencia-artificial-aplicada-a-tareas-administrativas_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 15
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-13" data-fin="2026-04-10">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-gestion-del-tiempo-y-organizacion-del-trabajo-con-herramientas-digitales.webp" alt="Gestión del Tiempo y Organización del Trabajo con Herramientas Digitales" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Gestión del Tiempo y Organización del Trabajo con Herramientas Digitales
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="eb49695b0234d23b1984a0af36f88793c">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="eceeed4e062164b4e8c854044b39652fd">
+                                Lunes, miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ed992c4dc4a1a65468c8b231843997346">
+                                Del 13 de marzo al 10 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-gestion-del-tiempo-y-organizacion-del-trabajo-con-herramientas-digitales_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Card 16 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-20" data-fin="2026-04-24">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-contables-y-financieras-para-la-gestion-de-recursos.webp" alt="Habilidades Contables y Financieras para la Gestión de Recursos" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Habilidades Contables y Financieras para la Gestión de Recursos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e84dc4c946010cf1efaa32834a2465105">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e94001d7bd85fedb2f548c96868fd2fde">
+                                Miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e6d82ca9bf40cccd624e5a034ae73c524">
+                                Del 20 de marzo al 24 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-habilidades-contables-y-financieras-para-la-gestion-de-recursos_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 17 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-05" data-fin="2026-04-09">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-servicio-y-orientacion-al-cliente-en-puntos-de-atencion.webp" alt="Servicio y Orientación al Cliente en Puntos de Atención" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Servicio y Orientación al Cliente en Puntos de Atención
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e14dbb84095cef246008feeb6383b2728">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e73700b84684240dc6907835cf62c3cf3">
+                                Martes y jueves 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e745e46a6b860255e938a9c808c3cf24a">
+                                Del 5 de marzo al 9 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-servicio-y-orientacion-al-cliente-en-puntos-de-atencion_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 18
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-21" data-fin="2026-05-02">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-toma-de-decisiones-en-entornos-organizacionales_0.webp" alt="Toma de decisiones en Entornos Organizacionales" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Toma de decisiones en Entornos Organizacionales
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e3e3b9c47ca3ef1fdc8ce164790539bb7">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e73d6eea44a0846f10b102b7a7f1786e5">
+                                Sábado 8:00 a.m a 11:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ef708f73ff38c088edca53a181521b9b5">
+                                Del 21 de marzo al 2 de mayo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-toma-de-decisiones-en-entornos-organizacionales_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>-->
+                <!-- Card 19 -->
+                <div class="card card-curso" data-modalidad="presencial" data-fecha="2026-03-21" data-fin="2026-05-02">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-comerciales-manejo-de-redes-sociales-para-la-gestion-comercial-y-relacionamiento-con-clientes.webp" alt="Habilidades Comerciales: Manejo de Redes Sociales para la Gestión Comercial y Relacionamiento con Clientes" width="400" height="267">
+                        <span class="badge-modalidad badge-presencial">Presencial</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Habilidades Comerciales: Manejo de Redes Sociales para la Gestión Comercial y Relacionamiento con Clientes
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="efc0fd5e6e7adfde232088ac4dd5fe768">
+                                Presencial
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e502bfdfe28770f39151a6d6edcd395a0">
+                                Sábado 8:00 a.m a 11:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="ed6f5b8a171f76ec3fd0e05b8c0b73092">
+                                Del 21 de marzo al 2 de mayo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-habilidades-comerciales-manejo-de-redes-sociales-para-la-gestion-comercial-y-relacionamiento-con-clientes_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 20 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-25" data-fin="2026-03-20">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-marketing-digital-con-enfoque-en-productos-y-servicios.webp" alt="Marketing Digital con Enfoque en Productos y Servicios" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Marketing Digital con Enfoque en Productos y Servicios
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e8ec075f2b35b2b44fddacd05dd1b5ddd">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="e620d36a5ea6779c926e5ff17bc3b7735">
+                                Lunes, miércoles y viernes 18:00 a 20:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="eab44f17a54542af65e18a454d42c0857">
+                                25 de marzo
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-markekting-digital-con-enfoque-en-productos-y-servicios.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 21 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-26" data-fin="2026-04-30">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-innovacion-y-transformacion-digital-avanzada-en-entornos-laborales.webp" alt="Innovación y Transformación Digital Avanzada en Entornos laborales" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Innovación y Transformación Digital Avanzada en Entornos Laborales
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="ecf568a8633db07e360b4dd7408a7b6e2">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ec4bf0df54c2d8aca3282094fbac76ac7">
+                                Martes y jueves 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e3bea301245db205c2cb5ee7b2a135258">
+                                Del 26 de marzo al 30 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-innovacion-y-transformacion-digital-avanzada-entorno-laborales.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 22 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-03-27" data-fin="2026-04-22">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-habilidades-gerenciales-esenciales-para-liderar-equipos.webp" alt="Habilidades Gerenciales Esenciales para Liderar Equipos" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Habilidades Gerenciales Esenciales para Liderar Equipos
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e4c284d14a9ff638edb8b6a4f5f25435b">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ea79be3b952e5f94888eac55cec0587f6">
+                                Lunes, miércoles y viernes 7:00 a.m a 9:00 a.m
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e475d3f4b8ddcfcbabcd1d83b6d1394a8">
+                                Del 27 de marzo al 22 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="sites/default/files/2026-02/curso-habilidades-gerenciales-esenciales-para-liderar-equipos_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 23 -->
+                <div class="card card-curso" data-modalidad="remoto" data-fecha="2026-04-10" data-fin="2026-04-29">
+                    <div class="card-curso-img-wrapper">
+                    <img class="card-curso-img" src="/sites/default/files/2026-02/curso-emprendimiento-y-diseño-de-modelos-de-negocio.webp" alt="Emprendimiento y Diseño de Modelos de Negocio" width="400" height="267">
+                        <span class="badge-modalidad badge-remoto">Remoto</span>
+                        <span class="badge-estado badge-finalizado">Finalizado</span>
+                    </div>
+                    <div class="card-curso-body">
+                        <h3 class="card-curso-titulo">
+                            Emprendimiento y Diseño de Modelos de Negocio
+                        </h3>
+                        <ul class="detalles-curso">
+                            <li class="li-remoto" data-list-item-id="e67cfe3281b5ea0060bad9f4938834595">
+                                Acceso remoto
+                            </li>
+                            <li class="li-tiempo" data-list-item-id="ed57299fcddf39695069a2b23e923b5b8">
+                                Lunes, miércoles y viernes 18:00 a 20:00
+                            </li>
+                            <li class="li-fecha" data-list-item-id="e734efb2b62938475bc54494d14419a9c">
+                                Del 10 al 29 de abril
+                            </li>
+                        </ul>
+                        <div class="card-curso-acciones">
+                            <a class="btn-descarga-card" href="/sites/default/files/2026-02/curso-emprendimiento-y-diseño-de-modelos-de-negocio_0.pdf" target="_blank"><i class="fas fa-file-pdf"></i> Temático</a>
+                            <a class="btn-inscripcion-card" href="#hubspot-form-section"><i class="fas fa-pen"></i> Inscribirme</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            <!-- Ver más -->
+            <div class="contenedor-ver-mas">
+                <button class="btn-ver-mas" id="btnVerMas"><span>Ver todos los programas</span> <i class="fas fa-chevron-down"></i></button>
+            </div>
+        </div>
+        <p class="nota-pie">
+            *Sujeto a términos y condiciones, así como a la disponibilidad y al cumplimiento del cupo mínimo.<br>
+            Aplica un máximo de 1 curso por participante. Es necesario presentar soporte del recibo de servicio público.<br>
+La Universidad del Rosario, entregará a los estudiantes, un certificado académico siempre y cuando se asista como mínimo al 80% de las horas de capacitación programadas.
+        </p>
+    </div>
+</section>

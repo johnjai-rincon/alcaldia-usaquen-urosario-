@@ -1,0 +1,52 @@
+<div class="hs-form-alcaldiadeusaquen" style="min-height:200px;" id="hubspot-form-section">
+    <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>&nbsp;
+    <script>
+        (function () {
+            // ID único para esta inscripción específica
+            const registroKey = "usaquen_form_6c27e8";
+            const contenedor = document.getElementById('hubspot-form-section');
+            // Función para verificar y cargar
+            function iniciarProceso() {
+                if (localStorage.getItem(registroKey)) {
+                    // SI YA SE INSCRIBIÓ: Mostramos mensaje institucional
+                    contenedor.innerHTML = `
+                        
+    <div style="padding:40px; border:2px solid #ed1c24; border-radius:10px; text-align:center; background:#fff;">
+                                
+        <h3 style="color:#ed1c24; margin-top:0;">
+            Registro ya realizado
+        </h3>
+                                
+        <p style="font-size:16px; color:#333;">
+            Usted ya ha completado su inscripción para este proceso desde este dispositivo.
+        </p>
+                                
+        <p style="font-size:14px; color:#666;">
+            No se permiten múltiples envíos.
+        </p>
+                            
+    </div>
+    `;
+                } else {
+                    // SI NO SE HA INSCRIBIÓ: Cargamos HubSpot
+                    if (window.hbspt) {
+                        window.hbspt.forms.create({
+                            region: "na1",
+                            portalId: "46379526",
+                            formId: "6c27e8f3-027d-44d0-9a44-d9eb079b6b83",
+                            target: "#hubspot-form-section",
+                            onFormSubmitted: function ($form) {
+                                // Guardamos la marca al finalizar con éxito
+                                localStorage.setItem(registroKey, "true");
+                                // Recarga opcional para bloquear el acceso tras 2 segundos
+                                setTimeout(function () { location.reload(); }, 2000);
+                            }
+                        });
+                    }
+                }
+            }
+            // Ejecutar la lógica
+            iniciarProceso();
+        })();
+    </script>
+</div>

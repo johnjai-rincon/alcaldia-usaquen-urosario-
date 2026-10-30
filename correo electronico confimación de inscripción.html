@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Inscripción - Alianza Usaquén</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+        }
+        table {
+            border-spacing: 0;
+            mso-table-lspace: 0pt;
+            mso-table-rspace: 0pt;
+        }
+        img {
+            border: 0;
+            height: auto;
+            line-height: 100%;
+            outline: none;
+            text-decoration: none;
+        }
+        .wrapper {
+            width: 100%;
+            table-layout: fixed;
+            background-color: #f8f9fa;
+        }
+        .main {
+            background-color: #ffffff;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 600px;
+            border-spacing: 0;
+            color: #212529;
+        }
+        .header {
+            background-color: #CA818F;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 40px 30px;
+            line-height: 1.6;
+        }
+        .confirmation-box {
+            background-color: #fef9fa;
+            border: 2px dashed #CA818F;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+        .program-name {
+            color: #CA818F;
+            font-size: 20px;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .footer {
+            background-color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #eeeeee;
+        }
+        .footer-logos {
+            margin-bottom: 20px;
+        }
+        .logo-img {
+            max-width: 130px;
+            margin: 0 15px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .btn-main {
+            background-color: #CA818F;
+            color: #ffffff !important;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 15px;
+        }
+        .steps {
+            font-size: 14px;
+            color: #6c757d;
+            text-align: left;
+            padding-left: 0;
+            list-style: none;
+        }
+        .steps li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+        }
+        .steps li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #CA818F;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <center class="wrapper">
+        <table class="main" width="100%">
+            <!-- Cabecera Institucional -->
+            <tr>
+                <td class="header">
+                    <h1 style="color: #ffffff; margin: 0; font-size: 22px; font-weight: 800; text-transform: uppercase;">Alianza Alcaldía de Usaquén & URosario</h1>
+                </td>
+            </tr>
+
+            <!-- Mensaje de Bienvenida -->
+            <tr>
+                <td class="content">
+                    <h2 style="margin-top: 0; color: #333333; font-size: 24px;">¡Tu inscripción ha sido recibida!</h2>
+                    <p>Estimado(a) <strong>{{ contact.firstname }} {{ contact.lastname }}</strong>,</p>
+                    <p>Hemos recibido correctamente tu solicitud para participar en la convocatoria de formación de la Alianza entre la Alcaldía Local de Usaquén y la Universidad del Rosario.</p>
+                    
+                    <!-- Caja de Confirmación Dinámica con la propiedad exacta de HubSpot -->
+                    <div class="confirmation-box">
+                        <span style="text-transform: uppercase; font-size: 11px; letter-spacing: 1px; color: #888; font-weight: bold;">Programa seleccionado:</span>
+                        <span class="program-name">{{ contact.seleccione_el_programa_de_preferencia }}</span>
+                    </div>
+
+                    <h3 style="font-size: 16px; border-bottom: 2px solid #CA818F; padding-bottom: 8px; width: 150px;">Próximos pasos</h3>
+                    <ul class="steps">
+                        <li><strong>Verificación de requisitos:</strong> Nuestro comité validará el soporte de servicio público adjunto para confirmar que resides en la localidad de Usaquén.</li>
+                        <li><strong>Confirmación de cupo:</strong> Los cursos requieren un cupo mínimo para su apertura. Una vez confirmado, te enviaremos los detalles de inicio.</li>
+<li><strong>Certificado:</strong> La Universidad del Rosario, entregará a los estudiantes, un certificado académico siempre y cuando se asista como mínimo al 80% de las horas de capacitación programadas.</li>
+                    </ul>
+
+                    <p style="font-size: 14px; margin-top: 35px; text-align: center;">¿Quieres conocer más sobre otros programas o descargar el contenido?</p>
+                    <div style="text-align: center;">
+                        <a href="https://educacioncontinua.urosario.edu.co/programas-alcaldia-usaquen" class="btn-main">Explorar oferta académica</a>
+                    </div>
+                </td>
+            </tr>
+
+            <!-- Footer con Logos -->
+            <tr>
+                <td class="footer">
+                    <div class="footer-logos">
+
+                        <img src="https://educacioncontinua.urosario.edu.co/themes/custom/artheme/assets/images/rosario-new-fixed.png" alt="Universidad del Rosario" class="logo-img">
+                        <img src="https://educacioncontinua.urosario.edu.co/sites/default/files/2026-02/logo-bogota-mi-ciudad-mi-casa.webp" alt="Alcaldía de Usaquén" class="logo-img">
+                    </div>
+                    <p style="font-size: 11px; color: #999999; margin: 0; line-height: 1.4;">
+                        Este es un mensaje informativo generado por el sistema de gestión de la Universidad del Rosario.<br>
+                        Calle 12C No. 6-25 - Bogotá D.C., Colombia.<br><br>
+                        <a href="{{ unsubscribe_link }}" style="color: #CA818F; text-decoration: none;">Gestionar preferencias de correo</a>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </center>
+</body>

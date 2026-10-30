@@ -1,0 +1,106 @@
+# Landing Alcaldía de Usaquén — Educación Continua URosario
+
+Bloques HTML, CSS y JS de la página
+[educacioncontinua.urosario.edu.co/programas-alcaldia-usaquen](https://educacioncontinua.urosario.edu.co/programas-alcaldia-usaquen),
+del convenio entre la Universidad del Rosario y la Alcaldía Local de Usaquén.
+
+No es una aplicación: son **bloques que se pegan en Drupal 10**, cada uno en su lugar
+dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
+`/sites/default/files/` y no resuelven si abres los archivos en local.
+
+---
+
+## Qué hay aquí
+
+### Bloques de la página
+
+| Archivo | Dónde va |
+|---|---|
+| `informacion banner.html` | Encabezado de la alianza, cifras y logos. Incluye el JSON-LD de Schema.org |
+| `oferta academica.html` | Buscador, filtros curso/taller y la cuadrícula de los 18 programas. Trae su JS al final |
+| `contacto.html` | Sección de asesoras con WhatsApp y teléfono |
+| `formulario alcadia de usaquen.html` | Embed simple del formulario de HubSpot |
+| `formulario alcadia de usaquen version js.html` | El mismo, con bloqueo de reenvío por `localStorage` |
+| `pagina de gracias.html` | Página de confirmación tras inscribirse |
+| `correo electronico confimación de inscripción.html` | Plantilla del correo de HubSpot |
+| `banner.html` | Card del Diplomado en Trading — **pertenece a otra página**, no a Usaquén |
+
+### Estilos y scripts
+
+| Archivo | Notas |
+|---|---|
+| `estilos de la págna.css` | Hoja completa, en 10 secciones numeradas |
+| `orden de programas.js` | Buscador y filtros. **Está duplicado** con el `<script>` de `oferta academica.html`: en Drupal se carga solo uno de los dos |
+| `orden-carrousel.js` | Código muerto del carrusel horizontal anterior. Falla si no existe `#scrollContainer` |
+
+### Documentos de trabajo
+
+| Archivo | Para qué |
+|---|---|
+| `Formulario HubSpot - guia paso a paso.md` | Los cambios pendientes del formulario, verificados contra el formulario real |
+| `Imagenes de los 18 programas.md` | Las 11 fotos por conseguir, con su enlace y nombre de archivo |
+| `Rediseño UX Oferta Académica.md` | Transcripción del rediseño que cambió el carrusel por la cuadrícula |
+
+### Fuentes de datos
+
+| Archivo | Contenido |
+|---|---|
+| `CRONOGRAMA USAQUEN V1 (2).xlsx` | Los **18 programas vigentes**: hoja `Cursos` (tema, tipo, título) y `Propuesta curricular` (unidades, metodología, docentes) |
+| `Copia de Eventos Alcaldía Usaquen - Landing.xlsx` | Los **25 programas del portafolio anterior**, ya finalizados, con código Apolo |
+| `imagenes de los programas.docx` | Las 25 URLs de Shutterstock del portafolio anterior |
+| `Cambios a realizar.docx` | Los cambios pedidos por el cliente |
+| `Contenidos Temáticos/` y `Contenidos Ajustados P.AU/` | 50 PDF del portafolio anterior. **Ninguno corresponde a los 18 programas vigentes** |
+
+---
+
+## Paleta
+
+Tomada de [Pa'LanteU](https://palanteu.lovable.app). La página se mantiene en claro
+porque va embebida en el portal institucional; de ese sitio se tomaron los colores de
+marca, no el modo oscuro.
+
+| Token | Valor |
+|---|---|
+| `--color-principal` | `#d4212d` |
+| `--color-principal-oscuro` | `#a81822` |
+| `--color-secundario` | `#261b81` |
+| `--color-tinta` / `--texto-oscuro` | `#04050d` |
+| `--color-papel` | `#faf8f5` |
+
+`--color-verde` (`#25D366`) se queda: es el verde de WhatsApp, no de la marca.
+
+> El **formulario de HubSpot tiene su propio estilo** y sigue en el rosa anterior
+> (`#CA818F`). Se cambia dentro de HubSpot, no desde este CSS.
+
+---
+
+## Los 18 programas
+
+12 cursos y 6 talleres, de la hoja `Cursos` del cronograma. Las tarjetas se generan a
+partir de esa hoja; los filtros separan por `data-tipo="curso|taller"` y cada tarjeta
+lleva `data-keywords` para que el buscador encuentre por tema y no solo por las palabras
+del título (sin eso, "turismo" no encuentra "paquetes turísticos").
+
+**Lo que el cronograma no trae:** modalidad y horario están como "PD" (por definir), así
+que las tarjetas dicen "Modalidad por definir" y "Fechas por definir". Lo único firme es
+el número de sesiones: 12 por curso, 8 por taller.
+
+---
+
+## Pendientes
+
+- [ ] Conseguir y subir las 11 imágenes (`Imagenes de los 18 programas.md`)
+- [ ] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
+- [ ] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
+- [ ] Definir modalidad, horario y fechas de los 18 programas
+- [ ] Conseguir los PDF de contenido temático de los 18 programas vigentes
+- [ ] Eliminar `orden-carrousel.js` y resolver la duplicación del JS
+
+---
+
+## Archivos `.bak`
+
+`oferta academica.html.25cursos.bak` y `estilos de la págna.css.rosa.bak` son el estado
+previo a los cambios del 30 de octubre de 2026. `oferta academica.html.bak` es una
+versión de mayo. Quedaron en el primer commit para no perder nada; una vez que confíes
+en el historial de git, se pueden borrar.
