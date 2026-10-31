@@ -17,7 +17,7 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 | Archivo | Dónde va |
 |---|---|
 | `informacion banner.html` | Encabezado de la alianza, cifras y logos. Incluye el JSON-LD de Schema.org |
-| `oferta academica.html` | Buscador, filtros curso/taller, cuadrícula de los 19 programas y la modal de "Más información". Trae su JS al final |
+| `oferta academica.html` | Buscador, filtros curso/taller, cuadrícula de los 18 programas y la modal de "Más información". Trae su JS al final |
 | `contacto.html` | Banda índigo con las dos asesoras, WhatsApp y teléfono |
 | `formulario alcadia de usaquen.html` | Embed simple del formulario de HubSpot |
 | `formulario alcadia de usaquen version js.html` | El mismo, con bloqueo de reenvío por `localStorage` |
@@ -45,7 +45,7 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 
 | Archivo | Contenido |
 |---|---|
-| `CRONOGRAMA USAQUEN V1 (4).xlsx` | Los **18 programas del convenio**: hoja `Cursos` (tema, tipo, título) y `Propuesta curricular` (unidades, metodología, docentes). Es la fuente de las tarjetas y de la modal |
+| `AREAS TEMÁTICAS V2.xlsx` | **La fuente de la oferta.** Hoja `AREAS TEMÁTICAS`: tema, tipo, título, objetivo, 4 unidades y metodología por programa. La hoja `AREAS TEMÁTICAS (2)` es una versión incompleta, con 2 unidades y la última fila vacía: **no usarla** |
 | `Copia de Eventos Alcaldía Usaquen - Landing.xlsx` | Los **25 programas del portafolio anterior**, ya finalizados, con código Apolo |
 | `imagenes de los programas.docx` | Las 25 URLs de Shutterstock del portafolio anterior |
 | `Cambios a realizar.docx` | Los cambios pedidos por el cliente |
@@ -102,12 +102,11 @@ marca, no el modo oscuro.
 
 ---
 
-## Los 19 programas
+## Los 18 programas
 
-13 cursos y 6 talleres. Dieciocho salen de la hoja `Cursos` del cronograma; el de
-**Fintech** lo pidió el cliente aparte, no está en el libro y va declarado en el
-generador. Como su contenido aún no está aprobado, lleva el distintivo
-**Próximamente** y su modal lo dice en lugar de mostrar unidades vacías. Las tarjetas se generan a
+12 cursos y 6 talleres, de la hoja `AREAS TEMÁTICAS`. Respecto al cronograma anterior,
+tres programas de analítica e IA se fundieron en uno, el de proveedores absorbió la
+analítica, y entraron "Tu negocio en un tablero" (era el *Adicional 5*) y el de Fintech. Las tarjetas se generan a
 partir de esa hoja; los filtros separan por `data-tipo="curso|taller"` y cada tarjeta
 lleva `data-keywords` para que el buscador encuentre por tema y no solo por las palabras
 del título (sin eso, "turismo" no encuentra "paquetes turísticos").
@@ -134,8 +133,9 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 - [ ] Conseguir y subir las 12 imágenes (`Imagenes de los programas.md`)
 - [ ] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [ ] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
-- [ ] Definir modalidad, horario y fechas de los 19 programas
-- [ ] Definir el contenido del curso de Fintech (unidades y metodología)
+- [ ] Definir modalidad, horario y fechas de los 18 programas
+- [ ] Definir la metodología del curso de Fintech (es lo único que falta en el libro)
+- [ ] Sincronizar el desplegable de programas en HubSpot (`Formulario HubSpot - guia paso a paso.md`, paso 6)
 - [ ] Conseguir los PDF de contenido temático de los programas vigentes
 - [ ] Eliminar `orden-carrousel.js` y resolver la duplicación del JS
 

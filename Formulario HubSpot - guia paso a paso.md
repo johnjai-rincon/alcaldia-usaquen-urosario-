@@ -167,26 +167,71 @@ aplique a todos los formularios de EDUCON de esta campaña, no solo a este.
 
 ---
 
-## Paso 6 — Los nombres de los 18 programas (recomendado)
+## Paso 6 — Actualizar la lista de programas (AREAS TEMÁTICAS V2)
 
-El desplegable ya tiene los 18, pero con los nombres de la columna **Tema principal**
-del cronograma, mientras la página usa **Título propuesto**. En tres casos no se parecen
-y la gente se va a equivocar al elegir:
+La página ya quedó con los **18 programas de `AREAS TEMÁTICAS V2.xlsx`**. El desplegable
+`seleccione_el_programa_de_preferencia` todavía tiene la lista anterior, así que hay que
+sincronizarlo: **quitar 2, añadir 2 y renombrar 2**. Al final siguen siendo 18 opciones.
 
-| Opción actual | En la página |
+> **No borres y vuelvas a crear la propiedad.** Los registros ya capturados guardan el
+> valor interno de la opción; si la eliminas, esos contactos quedan con un valor
+> huérfano y los informes dejan de cuadrar.
+
+### Quitar 2 opciones
+
+Tres programas de analítica e IA se fundieron en uno solo. Estos dos dejan de existir:
+
+| Opción en el formulario | Por qué sale |
 |---|---|
-| Talleres sobre habilidades empresariales | Costos, presupuestos y branding con IA |
-| Uso de plataformas e inteligencia artificial | Empleabilidad digital con IA |
-| Taller de negociación empresarial | Negociación comercial local e internacional |
+| `Uso de la analítica de datos` | Fusionado en el programa de analítica + IA |
+| `Analítica de datos` | Fusionado en el programa de analítica + IA |
 
-**Cambia solo las etiquetas, no los valores internos.** HubSpot deja editar el texto que
-ve el usuario conservando el valor guardado; así no se rompen los registros ya
-capturados ni los informes.
+> HubSpot no deja borrar una opción que ya tenga registros sin reasignarlos. Si pasa,
+> la salida limpia es marcarlas como **ocultas / archivadas** en vez de eliminarlas: ya
+> no aparecen en el formulario pero el histórico se conserva. Antes de ocultarlas,
+> exporta los contactos que las tengan: son los que se inscribieron a esos dos cursos y
+> hay que avisarles del cambio.
 
-Sugerencia: añade el tipo delante, igual que en la página —
-`Curso · Analítica de datos para negocios`, `Taller · Servicio al cliente y comunicación asertiva`.
-La tabla completa de los 18 pares está en `Imagenes de los 18 programas.md` y en el
-cronograma, hoja `Cursos`.
+### Añadir 2 opciones
+
+| Nueva opción | Programa en la página |
+|---|---|
+| `Curso para el uso de herramientas digitales` | Tu negocio en un tablero: indicadores que impulsan productividad |
+| `Curso de FINTECH, billeteras digitales, banca digital y pagos digitales` | Fintech y pagos digitales: domina las herramientas de la nueva economía financiera |
+
+El de herramientas digitales ya existía en el cronograma anterior como *Adicional 5*,
+fuera de la numeración; ahora entra como programa formal.
+
+### Renombrar 2 etiquetas
+
+Cambia **solo la etiqueta**, no el valor interno, para no romper lo ya capturado:
+
+| Etiqueta actual | Etiqueta nueva |
+|---|---|
+| `Técnicas de comunicación con proveedores` | `Técnicas de comunicación con proveedores y uso de analítica de datos` |
+| `Inteligencia artificial y el uso de herramientas actuales` | `Analítica de datos e inteligencia artificial y uso de herramientas actuales` |
+
+La segunda es la que absorbe los dos programas retirados: conviene que sea esa la que
+sobreviva, porque es la que ya tiene registros de los tres temas.
+
+### Las 14 que no se tocan
+
+Habilidades empresariales · Servicio al cliente · Paquetes turísticos · IA, innovación y
+emprendimiento · Negociaciones empresariales · Marketing en redes y pódcast · INVIMA ·
+Seguridad alimentaria · Uso de plataformas e IA · Fortalecer emprendimientos · Analítica
+para mercados · Taller de negociación · Analítica para programas y proyectos ·
+Marketing digital.
+
+> Ojo con no confundirlas: **tres programas de analítica sobreviven** y son distintos
+> entre sí — el de mercados para mipymes, el de programas y proyectos, y el fusionado de
+> analítica + IA. Solo se retiran los dos primeros de la tabla de arriba.
+
+### Y sigue pendiente lo de antes
+
+Las etiquetas del desplegable usan el *Tema principal* del documento, mientras que la
+página usa el *Título propuesto*. Siguen sin parecerse en varios casos, así que la
+recomendación del principio no cambia: pasar las etiquetas al título que ve el usuario
+en la página, conservando los valores internos.
 
 ---
 

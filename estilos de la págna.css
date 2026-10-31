@@ -1047,6 +1047,14 @@
 
         .modal-cuerpo h4:first-child { margin-top: 0; }
 
+        /* Objetivo del curso, al inicio de la modal. */
+        .detalle-objetivo {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: var(--texto-oscuro);
+            margin: 0;
+        }
+
         .detalle-unidades {
             list-style: none !important;
             padding: 0 !important;
