@@ -131,7 +131,8 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 
 ## Pendientes
 
-- [ ] Subir a Drupal las 11 imágenes de `imagenes/` (ya descargadas y convertidas)
+- [x] Subir a Drupal las 11 imágenes nuevas (las 18 tarjetas ya tienen foto)
+- [ ] Reemplazar la foto de "Fortalece tu mipyme": tiene texto quemado en inglés
 - [x] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [x] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
 - [ ] Definir modalidad, horario y fechas de los 18 programas
