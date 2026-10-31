@@ -875,20 +875,6 @@
             color: #ffffff;
         }
 
-        /* Énfasis / tema del programa, bajo el título. */
-        .card-curso-enfasis {
-            font-size: 0.82rem;
-            line-height: 1.5;
-            color: var(--texto-gris);
-            margin: -0.4rem 0 1rem;
-            min-height: 2.46rem;   /* 2 líneas, para uniformar las tarjetas */
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
         /* Icono del contador de sesiones. */
         .li-sesiones::before { content: "\f5fd"; }
 
@@ -916,319 +902,403 @@
             color: #8b8fa0;
         }
 
-        /* ==========================================================================
-           8. SECCIÓN: CONTACTO Y ASESORES
-           ========================================================================== */
-        .seccion-contacto {
-            padding: 80px 0;
-            background-color: #ffffff;
+        /* --- Botón "Más información" de la tarjeta --- */
+        .card-curso-acciones {
+            margin-top: auto;
+            padding-top: 0.5rem;
         }
 
-        .titulo-contacto {
-            color: var(--color-rosado) !important;
-            font-size: 2.2rem !important;
-            font-weight: 800;
-            text-align: center;
-            margin-bottom: 1rem;
-        }
-
-        .texto-contacto-sub {
-            max-width: 850px;
-            margin: 0 auto 2.5rem auto;
-            text-align: center;
-            color: var(--texto-principal);
-            font-size: 1.15rem;
-        }
-
-        .card-contacto-ajustada {
-            background-color: var(--fondo-tarjeta);
-            border: 1px solid #eee;
-            border-radius: 8px;
-            padding: 35px 25px;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .nombre-asesor {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--texto-principal);
-            margin-bottom: 5px;
-        }
-
-        .subtitulo-asesor {
-            font-size: 0.8rem;
-            color: var(--texto-secundario);
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            margin-bottom: 25px;
-        }
-
-        .contenedor-botones {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        .btn-mas-info {
             width: 100%;
-            max-width: 280px;
-            margin: 0 auto;
+            padding: 11px 16px;
+            border: 2px solid var(--color-principal);
+            border-radius: 10px;
+            background: transparent;
+            color: var(--color-principal);
+            font-family: inherit;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: all 0.3s ease;
         }
 
-        .btn-contacto-base {
-            padding: 12px 20px;
-            border-radius: 6px;
-            font-weight: 600;
-            font-size: 0.9rem;
+        .btn-mas-info:hover,
+        .btn-mas-info:focus-visible {
+            background: var(--color-principal);
+            color: #ffffff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(212, 33, 45, 0.3);
+        }
+
+        /* El detalle vive en el DOM para que lo lean buscadores y asistentes,
+           pero solo se muestra dentro de la modal. */
+        .detalle-programa {
+            display: none;
+        }
+
+        /* --- Modal de detalle del programa --- */
+        .modal-programa[hidden] { display: none; }
+
+        .modal-programa {
+            position: fixed;
+            inset: 0;
+            z-index: 1050;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            text-decoration: none !important;
-            transition: opacity 0.2s;
+            padding: 24px 16px;
         }
 
-        .btn-ws-verde { background-color: var(--color-verde); color: #ffffff !important; }
-        .btn-tel-outline { background-color: transparent; color: var(--texto-principal) !important; border: 1.5px solid var(--texto-principal); }
+        body.modal-abierta { overflow: hidden; }
+
+        .modal-fondo {
+            position: absolute;
+            inset: 0;
+            background: rgba(4, 5, 13, 0.65);
+            backdrop-filter: blur(3px);
+            -webkit-backdrop-filter: blur(3px);
+            animation: modalFondo 0.25s ease;
+        }
+
+        @keyframes modalFondo { from { opacity: 0; } to { opacity: 1; } }
+
+        @keyframes modalEntra {
+            from { opacity: 0; transform: translateY(18px) scale(0.98); }
+            to   { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .modal-caja {
+            position: relative;
+            background: #ffffff;
+            border-radius: 18px;
+            border-top: 5px solid var(--color-principal);
+            max-width: 620px;
+            width: 100%;
+            max-height: 86vh;
+            overflow-y: auto;
+            padding: 2.4rem 2.2rem 2rem;
+            text-align: left;
+            box-shadow: 0 30px 70px rgba(4, 5, 13, 0.35);
+            animation: modalEntra 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .modal-cerrar {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: 50%;
+            background: #f3f0ea;
+            color: var(--texto-gris);
+            font-size: 1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .modal-cerrar:hover,
+        .modal-cerrar:focus-visible {
+            background: var(--color-principal);
+            color: #ffffff;
+        }
+
+        .modal-tipo {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 50px;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.9rem;
+        }
+
+        .modal-titulo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            line-height: 1.3;
+            color: var(--texto-oscuro);
+            margin: 0 0 1.4rem;
+            padding-right: 2rem;
+        }
+
+        .modal-cuerpo h4 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--color-principal);
+            margin: 1.6rem 0 0.8rem;
+        }
+
+        .modal-cuerpo h4:first-child { margin-top: 0; }
+
+        .detalle-unidades {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            counter-reset: unidad;
+        }
+
+        .detalle-unidades li {
+            position: relative;
+            padding: 0 0 0 2.1rem;
+            margin-bottom: 0.9rem !important;
+            font-size: 0.92rem;
+            line-height: 1.55;
+            color: var(--texto-oscuro);
+        }
+
+        .detalle-unidades li::before {
+            counter-increment: unidad;
+            content: counter(unidad);
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 1.45rem;
+            height: 1.45rem;
+            border-radius: 50%;
+            background: var(--color-secundario);
+            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* "Unidad 1." ya lo dice el número del círculo */
+        .detalle-unidades li strong { display: none; }
+
+        .detalle-metodologia {
+            font-size: 0.92rem;
+            line-height: 1.6;
+            color: var(--texto-gris);
+            margin: 0;
+            padding: 1rem 1.2rem;
+            background: var(--color-papel);
+            border-left: 3px solid var(--color-secundario);
+            border-radius: 0 8px 8px 0;
+        }
+
+        .modal-pie {
+            margin-top: 1.8rem;
+            padding-top: 1.4rem;
+            border-top: 1px solid var(--borde-suave);
+            text-align: center;
+        }
+
+        .btn-inscripcion-modal {
+            display: inline-block;
+            background: var(--color-principal);
+            color: #ffffff !important;
+            padding: 13px 32px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 0.92rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 18px rgba(212, 33, 45, 0.3);
+        }
+
+        .btn-inscripcion-modal:hover {
+            background: var(--color-principal-oscuro);
+            color: #ffffff !important;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 576px) {
+            .modal-caja { padding: 2rem 1.3rem 1.6rem; border-radius: 14px; }
+            .modal-titulo { font-size: 1.1rem; }
+        }
 
         /* ==========================================================================
-           8b. SECCIÓN: ASESORÍA SPLIT (nuevo diseño)
+           8. SECCIÓN: ASESORÍA (banda índigo con tarjetas)
            ========================================================================== */
-
-        /* Layout split: izquierda info / derecha cards */
-        .asesoria-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            min-height: 480px;
-            overflow: hidden;
-            border-radius: 20px;
-            margin: 60px auto;
-            max-width: 1100px;
-            box-shadow: 0 20px 60px rgba(212, 33, 45, 0.15);
+        .seccion-asesoria {
+            background: linear-gradient(160deg, #261b81 0%, #1b1259 60%, #150d47 100%);
+            padding: 72px 20px;
+            margin-top: 40px;
         }
 
-        /* Panel izquierdo — fondo degradado marca */
-        .asesoria-panel-info {
-            background: linear-gradient(145deg, #d4212d 0%, #a81822 50%, #261b81 100%);
-            padding: 56px 48px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            color: #fff;
+        .asesoria-interior {
+            max-width: 980px;
+            margin: 0 auto;
+        }
+
+        .asesoria-encabezado {
+            text-align: center;
+            margin-bottom: 2.8rem;
         }
 
         .asesoria-badge {
             display: inline-block;
-            background: rgba(255,255,255,0.2);
-            color: #fff;
+            background: rgba(255, 255, 255, 0.14);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            color: #ffffff;
             font-size: 0.72rem;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            padding: 5px 14px;
+            padding: 6px 16px;
             border-radius: 50px;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255,255,255,0.3);
-            width: fit-content;
+            margin-bottom: 1.2rem;
         }
 
         .asesoria-titulo {
-            font-size: 1.9rem;
+            color: #ffffff !important;
+            font-size: 2rem !important;
             font-weight: 800;
             line-height: 1.25;
-            margin-bottom: 20px;
-            color: #fff;
+            margin: 0 0 1rem;
         }
 
         .asesoria-descripcion {
-            font-size: 0.97rem;
+            max-width: 680px;
+            margin: 0 auto;
+            font-size: 0.98rem;
             line-height: 1.7;
-            color: rgba(255,255,255,0.88);
-            margin-bottom: 28px;
+            color: rgba(255, 255, 255, 0.82);
         }
 
-        .asesoria-descripcion strong { color: #fff; }
+        .asesoria-descripcion strong { color: #ffffff; }
 
-        /* Lista de hechos clave */
-        .asesoria-facts {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+        /* --- Tarjetas de asesoras --- */
+        .asesoria-tarjetas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
         }
 
-        .asesoria-facts li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 0.9rem;
-            color: rgba(255,255,255,0.9);
-            line-height: 1.5;
-        }
-
-        .asesoria-facts strong { color: #fff; }
-
-        .fact-icon {
-            width: 18px;
-            height: 18px;
-            flex-shrink: 0;
-            margin-top: 2px;
-            color: rgba(255,255,255,0.7);
-        }
-
-        /* Panel derecho — cards */
-        .asesoria-panel-cards {
-            background: #faf8f5;
-            padding: 40px 36px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            justify-content: center;
-        }
-
-        /* Tarjeta de cada asesora */
-        .card-asesora {
+        .tarjeta-asesora {
             background: #ffffff;
-            border-radius: 14px;
-            padding: 24px 24px 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.07);
-            border-left: 4px solid var(--color-principal);
+            border-radius: 16px;
+            padding: 2rem 1.6rem 1.6rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 16px 40px rgba(4, 5, 13, 0.28);
             transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .card-asesora:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(212, 33, 45, 0.18);
+        .tarjeta-asesora:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 22px 52px rgba(4, 5, 13, 0.36);
         }
 
-        /* Header de la tarjeta */
-        .asesora-header {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            margin-bottom: 10px;
-        }
-
-        /* Avatar con iniciales */
         .asesora-avatar {
-            width: 48px;
-            height: 48px;
+            width: 62px;
+            height: 62px;
             border-radius: 50%;
-            background: linear-gradient(135deg, var(--color-principal), #261b81);
-            color: #fff;
-            font-size: 0.85rem;
+            background: linear-gradient(135deg, var(--color-principal), var(--color-principal-oscuro));
+            color: #ffffff;
+            font-size: 1.1rem;
             font-weight: 800;
+            letter-spacing: 1px;
             display: flex;
             align-items: center;
             justify-content: center;
-            flex-shrink: 0;
-            letter-spacing: 0.5px;
-        }
-
-        .asesora-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 2px;
+            margin-bottom: 1rem;
+            box-shadow: 0 6px 16px rgba(212, 33, 45, 0.35);
         }
 
         .asesora-nombre {
-            font-size: 1rem;
-            font-weight: 700;
+            font-size: 1.12rem;
+            font-weight: 800;
             color: var(--texto-oscuro);
+            line-height: 1.3;
         }
 
         .asesora-rol {
-            font-size: 0.78rem;
-            color: var(--texto-gris);
+            font-size: 0.74rem;
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.8px;
-        }
-
-        .asesora-org { display: none; } /* Solo para schema.org */
-
-        .asesora-intro {
-            font-size: 0.88rem;
+            letter-spacing: 1px;
             color: var(--texto-gris);
-            line-height: 1.6;
-            margin-bottom: 16px;
+            margin-top: 4px;
+            margin-bottom: 1.4rem;
         }
 
-        /* Botones de contacto */
         .asesora-acciones {
             display: flex;
+            flex-direction: column;
             gap: 10px;
+            width: 100%;
+            margin-top: auto;
         }
 
         .btn-asesora {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 7px;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 0.88rem;
+            gap: 8px;
+            min-height: 46px;     /* objetivo táctil accesible */
+            padding: 11px 18px;
+            border-radius: 10px;
+            font-size: 0.9rem;
             font-weight: 700;
             text-decoration: none !important;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-            min-height: 44px; /* Accesibilidad táctil */
-            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
         }
 
         .btn-asesora:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(4, 5, 13, 0.2);
         }
 
         .btn-asesora-ws {
-            background-color: #25D366;
+            background-color: var(--color-verde);
             color: #ffffff !important;
-            flex: 1;
         }
+
+        .btn-asesora-ws:hover { background-color: #1eb956; }
 
         .btn-asesora-tel {
             background-color: transparent;
             color: var(--texto-oscuro) !important;
-            border: 1.5px solid #ddd;
-            flex: 1;
+            border: 1.5px solid var(--borde-suave);
         }
 
-        .btn-icon {
+        .btn-asesora-tel:hover { border-color: var(--color-principal); }
+
+        .btn-icono {
             width: 17px;
             height: 17px;
             flex-shrink: 0;
         }
 
-        /* Responsive: stack en móvil */
-        @media (max-width: 768px) {
-            .asesoria-split {
-                grid-template-columns: 1fr;
-                border-radius: 14px;
-                margin: 32px 16px;
-            }
-
-            .asesoria-panel-info {
-                padding: 40px 28px 32px;
-            }
-
-            .asesoria-titulo { font-size: 1.55rem; }
-
-            .asesoria-panel-cards {
-                padding: 28px 20px 32px;
-            }
-
-            .asesora-acciones {
-                flex-direction: column;
-            }
-
-            .btn-asesora { width: 100%; }
+        /* --- Datos del servicio --- */
+        .asesoria-datos {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 2.4rem 0 0 !important;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem 2.4rem;
         }
 
-        @media (max-width: 480px) {
-            .asesoria-panel-info { padding: 32px 20px 28px; }
-            .asesoria-panel-cards { padding: 24px 16px 28px; }
+        .asesoria-datos li {
+            font-size: 0.88rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        .asesoria-datos strong { color: #ffffff; }
+
+        @media (max-width: 768px) {
+            .seccion-asesoria { padding: 52px 16px; }
+            .asesoria-titulo { font-size: 1.55rem !important; }
+            .asesoria-tarjetas { grid-template-columns: 1fr; gap: 18px; }
+            .asesoria-datos { flex-direction: column; align-items: center; gap: 0.6rem; }
         }
 
            /* ==========================================================================

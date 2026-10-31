@@ -17,8 +17,8 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 | Archivo | Dónde va |
 |---|---|
 | `informacion banner.html` | Encabezado de la alianza, cifras y logos. Incluye el JSON-LD de Schema.org |
-| `oferta academica.html` | Buscador, filtros curso/taller y la cuadrícula de los 18 programas. Trae su JS al final |
-| `contacto.html` | Sección de asesoras con WhatsApp y teléfono |
+| `oferta academica.html` | Buscador, filtros curso/taller, cuadrícula de los 18 programas y la modal de "Más información". Trae su JS al final |
+| `contacto.html` | Banda índigo con las dos asesoras, WhatsApp y teléfono |
 | `formulario alcadia de usaquen.html` | Embed simple del formulario de HubSpot |
 | `formulario alcadia de usaquen version js.html` | El mismo, con bloqueo de reenvío por `localStorage` |
 | `pagina de gracias.html` | Página de confirmación tras inscribirse |
@@ -45,7 +45,7 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 
 | Archivo | Contenido |
 |---|---|
-| `CRONOGRAMA USAQUEN V1 (2).xlsx` | Los **18 programas vigentes**: hoja `Cursos` (tema, tipo, título) y `Propuesta curricular` (unidades, metodología, docentes) |
+| `CRONOGRAMA USAQUEN V1 (4).xlsx` | Los **18 programas vigentes**: hoja `Cursos` (tema, tipo, título) y `Propuesta curricular` (unidades, metodología, docentes). Es la fuente de las tarjetas y de la modal |
 | `Copia de Eventos Alcaldía Usaquen - Landing.xlsx` | Los **25 programas del portafolio anterior**, ya finalizados, con código Apolo |
 | `imagenes de los programas.docx` | Las 25 URLs de Shutterstock del portafolio anterior |
 | `Cambios a realizar.docx` | Los cambios pedidos por el cliente |
@@ -80,6 +80,12 @@ marca, no el modo oscuro.
 partir de esa hoja; los filtros separan por `data-tipo="curso|taller"` y cada tarjeta
 lleva `data-keywords` para que el buscador encuentre por tema y no solo por las palabras
 del título (sin eso, "turismo" no encuentra "paquetes turísticos").
+
+Cada tarjeta lleva un botón **Más información** que abre una modal con las 4 unidades y
+la metodología del programa, tomadas de las columnas E, F, G y H de la hoja
+`Propuesta curricular`. Ese contenido vive en el DOM dentro de `.detalle-programa`
+(oculto por CSS, no por `hidden`) para que lo lean buscadores y asistentes, y para que
+el buscador de la página también encuentre por el nombre de una unidad.
 
 **Lo que el cronograma no trae:** modalidad y horario están como "PD" (por definir), así
 que las tarjetas dicen "Modalidad por definir" y "Fechas por definir". Lo único firme es

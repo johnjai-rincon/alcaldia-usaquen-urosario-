@@ -26,15 +26,15 @@
             return str.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
         }
 
-        /* Busca en el titulo, el enfasis y las palabras clave de la tarjeta,
-           para que terminos del tema (ej. "turismo" cuando el titulo dice
-           "turisticos") tambien encuentren el programa. */
+        /* Busca en el titulo, las palabras clave y el contenido de la modal, para que
+           terminos del tema (ej. "turismo" cuando el titulo dice "turisticos", o el
+           nombre de una unidad) tambien encuentren el programa. */
         function textoDe(card) {
             var t = card.querySelector('.card-curso-titulo');
-            var d = card.querySelector('.card-curso-enfasis');
+            var d = card.querySelector('.detalle-programa');
             return normalizar((t ? t.textContent : '') + ' ' +
-                (d ? d.textContent : '') + ' ' +
-                (card.getAttribute('data-keywords') || ''));
+                (card.getAttribute('data-keywords') || '') + ' ' +
+                (d ? d.textContent : ''));
         }
 
         function pasaBusqueda(card) {
@@ -143,6 +143,65 @@
                     gridContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
             });
         }
+
+        /* ------------------------------------------------------------------
+           Modal de "Mas informacion"
+           ------------------------------------------------------------------ */
+        var modal = document.getElementById('modalPrograma');
+        var modalTipo = document.getElementById('modalProgramaTipo');
+        var modalTitulo = document.getElementById('modalProgramaTitulo');
+        var modalCuerpo = document.getElementById('modalProgramaCuerpo');
+        var ultimoBoton = null;
+
+        function abrirModal(card, boton) {
+            if (!modal) return;
+            var titulo = card.querySelector('.card-curso-titulo');
+            var detalle = card.querySelector('.detalle-programa');
+            var tipo = card.getAttribute('data-tipo') || '';
+
+            modalTitulo.textContent = titulo ? titulo.textContent.trim() : '';
+            modalTipo.textContent = tipo === 'taller' ? 'Taller' : 'Curso';
+            modalTipo.className = 'modal-tipo badge-' + (tipo || 'curso');
+            modalCuerpo.innerHTML = detalle ? detalle.innerHTML : '';
+
+            ultimoBoton = boton || null;
+            modal.hidden = false;
+            document.body.classList.add('modal-abierta');
+            /* El foco entra a la modal para que el teclado no siga en la pagina. */
+            var cerrar = modal.querySelector('.modal-cerrar');
+            if (cerrar) cerrar.focus();
+        }
+
+        function cerrarModal() {
+            if (!modal || modal.hidden) return;
+            modal.hidden = true;
+            document.body.classList.remove('modal-abierta');
+            if (ultimoBoton) { ultimoBoton.focus(); ultimoBoton = null; }
+        }
+
+        /* Delegacion: las tarjetas se ocultan y se muestran, asi que no conviene
+           registrar un listener por boton. */
+        if (gridContainer) {
+            gridContainer.addEventListener('click', function (ev) {
+                var boton = ev.target.closest ? ev.target.closest('.btn-mas-info') : null;
+                if (!boton) return;
+                var card = boton.closest('.card-curso');
+                if (card) abrirModal(card, boton);
+            });
+        }
+
+        if (modal) {
+            modal.addEventListener('click', function (ev) {
+                if (ev.target.closest && ev.target.closest('[data-cerrar-modal]')) cerrarModal();
+            });
+            /* El boton de inscripcion lleva al formulario: hay que cerrar primero. */
+            var irAlForm = modal.querySelector('.btn-inscripcion-modal');
+            if (irAlForm) irAlForm.addEventListener('click', cerrarModal);
+        }
+
+        document.addEventListener('keydown', function (ev) {
+            if (ev.key === 'Escape' || ev.key === 'Esc') cerrarModal();
+        });
 
         /* Drupal agrega clase .lazyload con opacity:0 a todas las imagenes.
            Esta funcion elimina esa clase y restaura src si fue convertido a data-src. */
