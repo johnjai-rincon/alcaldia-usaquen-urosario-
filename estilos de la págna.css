@@ -99,6 +99,13 @@
         /* ==========================================================================
            4. SECCIÓN: FORMULARIO HUBSPOT / ALCALDÍA
            ========================================================================== */
+        /* La cabecera del tema es fija (~61px): sin este margen, el salto al ancla
+           deja el inicio del formulario debajo de ella. */
+        .hs-form-alcaldiadeusaquen,
+        #hubspot-form-section {
+            scroll-margin-top: 90px;
+        }
+
         .hs-form-alcaldiadeusaquen {
             max-width: 600px;
             margin: 100px auto;

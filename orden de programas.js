@@ -199,10 +199,48 @@
             modal.addEventListener('click', function (ev) {
                 if (ev.target.closest && ev.target.closest('[data-cerrar-modal]')) cerrarModal();
             });
-            /* El boton de inscripcion lleva al formulario: hay que cerrar primero. */
-            var irAlForm = modal.querySelector('.btn-inscripcion-modal');
-            if (irAlForm) irAlForm.addEventListener('click', cerrarModal);
         }
+
+        /* ------------------------------------------------------------------
+           Ir al formulario de HubSpot
+           ------------------------------------------------------------------
+           El ancla #hubspot-form-section no siempre existe: el bloque simple
+           del embed se publica sin id. Resolvemos el destino con alternativas
+           y compensamos la cabecera fija del tema, que si no tapa el inicio
+           del formulario. */
+        function destinoFormulario() {
+            return document.getElementById('hubspot-form-section') ||
+                document.querySelector('.hs-form-alcaldiadeusaquen') ||
+                document.querySelector('[id^="hbspt-form"]');
+        }
+
+        function altoCabeceraFija() {
+            var alto = 0;
+            document.querySelectorAll('header, .navbar, .region-header').forEach(function (el) {
+                var pos = window.getComputedStyle(el).position;
+                if (pos === 'fixed' || pos === 'sticky')
+                    alto = Math.max(alto, el.getBoundingClientRect().height);
+            });
+            return alto;
+        }
+
+        function irAlFormulario(ev) {
+            var destino = destinoFormulario();
+            if (!destino) return;          /* sin destino, dejamos el salto nativo */
+            if (ev) ev.preventDefault();
+            cerrarModal();
+            var y = destino.getBoundingClientRect().top + window.pageYOffset -
+                altoCabeceraFija() - 16;
+            window.scrollTo({ top: Math.max(y, 0), behavior: 'smooth' });
+        }
+
+        /* Delegado en document: cubre el boton general de la sección y el de la
+           modal, que se crea y se destruye. */
+        document.addEventListener('click', function (ev) {
+            var a = ev.target.closest ?
+                ev.target.closest('a[href="#hubspot-form-section"]') : null;
+            if (a) irAlFormulario(ev);
+        });
 
         document.addEventListener('keydown', function (ev) {
             if (ev.key === 'Escape' || ev.key === 'Esc') cerrarModal();
