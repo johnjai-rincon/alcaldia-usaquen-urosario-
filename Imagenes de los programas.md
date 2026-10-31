@@ -1,4 +1,4 @@
-# Imágenes de los 18 programas
+# Imágenes de los programas
 
 Misma fuente (Shutterstock) y mismo formato que `imagenes de los programas.docx`.
 Son 11 fotos nuevas: **5** para temáticas que no tenían ninguna y **6** que reemplazan
@@ -103,6 +103,20 @@ https://www.shutterstock.com/es/image-photo/business-team-reviewing-printed-char
 > el mismo criterio con el que rechacé el globo terráqueo en negociación.
 
 ---
+
+## Parte 3 — La que falta por elegir
+
+### Fintech y finanzas digitales
+**Curso** · Programa añadido después del cronograma, con el contenido todavía en
+definición. No tiene foto asignada: la tarjeta muestra el marcador "Imagen pendiente"
+y el distintivo **Próximamente**.
+`curso-fintech-y-finanzas-digitales.webp`
+
+> Al buscarla, conviene algo de pagos digitales o banca móvil reales (una persona
+> pagando con el teléfono, por ejemplo) y evitar lo típico de cripto: monedas
+> físicas de bitcoin, gráficas verdes de trading, cadenas de bloques en 3D. El curso
+> es de finanzas digitales, no de especulación.
+
 
 ## Cómo montarlas
 
