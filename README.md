@@ -131,7 +131,7 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 
 ## Pendientes
 
-- [ ] Conseguir y subir las imágenes (`Imagenes de los programas.md`); falta elegir la de Fintech
+- [ ] Conseguir y subir las 12 imágenes (`Imagenes de los programas.md`)
 - [ ] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [ ] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
 - [ ] Definir modalidad, horario y fechas de los 19 programas

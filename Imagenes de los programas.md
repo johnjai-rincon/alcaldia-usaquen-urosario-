@@ -1,8 +1,9 @@
 # Imágenes de los programas
 
 Misma fuente (Shutterstock) y mismo formato que `imagenes de los programas.docx`.
-Son 11 fotos nuevas: **5** para temáticas que no tenían ninguna y **6** que reemplazan
-a fotos que solo servían a medias.
+Son 12 fotos nuevas: **5** para temáticas que no tenían ninguna, **6** que reemplazan
+a fotos que solo servían a medias y **1** para el programa de Fintech, añadido después
+del cronograma.
 
 Todas están revisadas abriendo la imagen, no solo por el título de búsqueda. Son
 fotografías con personas, a color: descarté renders 3D, ilustraciones, imágenes
@@ -104,18 +105,25 @@ https://www.shutterstock.com/es/image-photo/business-team-reviewing-printed-char
 
 ---
 
-## Parte 3 — La que falta por elegir
+## Parte 3 — El programa añadido
 
 ### Fintech y finanzas digitales
-**Curso** · Programa añadido después del cronograma, con el contenido todavía en
-definición. No tiene foto asignada: la tarjeta muestra el marcador "Imagen pendiente"
-y el distintivo **Próximamente**.
+**Curso** · Cliente pagando con el teléfono en un datafono, dentro de un comercio.
+https://www.shutterstock.com/es/image-photo/smiling-customer-uses-smartphone-credit-card-2773739565
 `curso-fintech-y-finanzas-digitales.webp`
 
-> Al buscarla, conviene algo de pagos digitales o banca móvil reales (una persona
-> pagando con el teléfono, por ejemplo) y evitar lo típico de cripto: monedas
-> físicas de bitcoin, gráficas verdes de trading, cadenas de bloques en 3D. El curso
-> es de finanzas digitales, no de especulación.
+> Muestra el pago digital en el momento en que ocurre, que es de lo que trata el
+> curso. Evité a propósito lo típico de cripto — monedas de bitcoin, gráficas de
+> trading, cadenas de bloques en 3D — porque el programa es de finanzas digitales,
+> no de especulación.
+>
+> Descarté otras dos: unas manos con teléfono y datafono, sin rostro, que quedaba
+> fría al lado de las demás; y una mujer de negocios con el teléfono, que era un
+> retrato genérico de oficina y no comunicaba nada de fintech.
+
+Este programa tampoco tiene contenido todavía: su tarjeta lleva el distintivo
+**Próximamente** y la modal dice que las unidades y la metodología están en
+definición.
 
 
 ## Cómo montarlas
