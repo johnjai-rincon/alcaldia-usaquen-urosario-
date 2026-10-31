@@ -153,16 +153,21 @@
         var modalCuerpo = document.getElementById('modalProgramaCuerpo');
         var ultimoBoton = null;
 
+        /* Cada nodo se comprueba antes de usarlo: el filtro de CKEditor en Drupal
+           borra elementos del bloque (los <span> vacios, por ejemplo), y si falta
+           uno no puede impedir que la modal se abra. */
         function abrirModal(card, boton) {
             if (!modal) return;
             var titulo = card.querySelector('.card-curso-titulo');
             var detalle = card.querySelector('.detalle-programa');
-            var tipo = card.getAttribute('data-tipo') || '';
+            var tipo = card.getAttribute('data-tipo') === 'taller' ? 'taller' : 'curso';
 
-            modalTitulo.textContent = titulo ? titulo.textContent.trim() : '';
-            modalTipo.textContent = tipo === 'taller' ? 'Taller' : 'Curso';
-            modalTipo.className = 'modal-tipo badge-' + (tipo || 'curso');
-            modalCuerpo.innerHTML = detalle ? detalle.innerHTML : '';
+            if (modalTitulo) modalTitulo.textContent = titulo ? titulo.textContent.trim() : '';
+            if (modalTipo) {
+                modalTipo.textContent = tipo === 'taller' ? 'Taller' : 'Curso';
+                modalTipo.className = 'modal-tipo badge-' + tipo;
+            }
+            if (modalCuerpo) modalCuerpo.innerHTML = detalle ? detalle.innerHTML : '';
 
             ultimoBoton = boton || null;
             modal.hidden = false;

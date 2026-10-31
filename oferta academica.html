@@ -178,7 +178,7 @@
                             <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/happy-couple-discussing-vacation-package-travel-2629017001
                                  <img class="card-curso-img" src="/sites/default/files/2026-10/curso-diseno-y-comercializacion-de-paquetes-turisticos.webp"
                                       alt="Diseño y comercialización de paquetes turísticos: crea experiencias y alianzas" width="400" height="267"> -->
-                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <div class="img-pendiente">Imagen pendiente</div>
                             <span class="badge-modalidad badge-taller">Taller</span>
                         </div>
                         <div class="card-curso-body">
@@ -322,7 +322,7 @@
                             <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/quality-control-technician-using-tablet-canned-2749164391
                                  <img class="card-curso-img" src="/sites/default/files/2026-10/curso-gestion-de-tramites-ante-invima.webp"
                                       alt="Gestión de trámites ante INVIMA: prepara requisitos para comercializar productos" width="400" height="267"> -->
-                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <div class="img-pendiente">Imagen pendiente</div>
                             <span class="badge-modalidad badge-curso">Curso</span>
                         </div>
                         <div class="card-curso-body">
@@ -358,7 +358,7 @@
                             <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/woman-cuts-pineapple-safety-glove-food-2608514293
                                  <img class="card-curso-img" src="/sites/default/files/2026-10/curso-seguridad-alimentaria-en-la-practica.webp"
                                       alt="Seguridad alimentaria en la práctica: manipula, previene riesgos y elabora alimentos seguros" width="400" height="267"> -->
-                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <div class="img-pendiente">Imagen pendiente</div>
                             <span class="badge-modalidad badge-curso">Curso</span>
                         </div>
                         <div class="card-curso-body">
@@ -499,7 +499,7 @@
                             <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/salesman-wearing-apron-engaging-customer-while-2662678941
                                  <img class="card-curso-img" src="/sites/default/files/2026-10/curso-ventas-efectivas-para-emprendimientos.webp"
                                       alt="Ventas efectivas para emprendimientos: conecta con clientes y cierra negocios" width="400" height="267"> -->
-                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <div class="img-pendiente">Imagen pendiente</div>
                             <span class="badge-modalidad badge-taller">Taller</span>
                         </div>
                         <div class="card-curso-body">
@@ -572,7 +572,7 @@
                             <!-- IMAGEN PENDIENTE — foto elegida: https://www.shutterstock.com/es/image-photo/diverse-group-colleagues-celebrates-new-partnership-2604023695
                                  <img class="card-curso-img" src="/sites/default/files/2026-10/curso-negociacion-comercial-local-e-internacional.webp"
                                       alt="Negociación comercial local e internacional: desarrolla acuerdos en distintos mercados" width="400" height="267"> -->
-                            <span class="img-pendiente" aria-hidden="true"></span>
+                            <div class="img-pendiente">Imagen pendiente</div>
                             <span class="badge-modalidad badge-taller">Taller</span>
                         </div>
                         <div class="card-curso-body">
@@ -694,9 +694,13 @@
             <button type="button" class="modal-cerrar" data-cerrar-modal aria-label="Cerrar">
                 <i class="fas fa-times" aria-hidden="true"></i>
             </button>
-            <span class="modal-tipo" id="modalProgramaTipo"></span>
-            <h3 class="modal-titulo" id="modalProgramaTitulo"></h3>
-            <div class="modal-cuerpo" id="modalProgramaCuerpo"></div>
+            <!-- Estos tres nodos llevan contenido inicial a proposito: el filtro de
+                 CKEditor borra los elementos vacios al pegar el bloque en Drupal. -->
+            <span class="modal-tipo badge-curso" id="modalProgramaTipo">Curso</span>
+            <h3 class="modal-titulo" id="modalProgramaTitulo">Detalle del programa</h3>
+            <div class="modal-cuerpo" id="modalProgramaCuerpo">
+                <p>Cargando el contenido del programa…</p>
+            </div>
             <div class="modal-pie">
                 <a class="btn-inscripcion-modal" href="#hubspot-form-section">Inscribirme en este programa</a>
             </div>
@@ -860,16 +864,21 @@
         var modalCuerpo = document.getElementById('modalProgramaCuerpo');
         var ultimoBoton = null;
 
+        /* Cada nodo se comprueba antes de usarlo: el filtro de CKEditor en Drupal
+           borra elementos del bloque (los <span> vacios, por ejemplo), y si falta
+           uno no puede impedir que la modal se abra. */
         function abrirModal(card, boton) {
             if (!modal) return;
             var titulo = card.querySelector('.card-curso-titulo');
             var detalle = card.querySelector('.detalle-programa');
-            var tipo = card.getAttribute('data-tipo') || '';
+            var tipo = card.getAttribute('data-tipo') === 'taller' ? 'taller' : 'curso';
 
-            modalTitulo.textContent = titulo ? titulo.textContent.trim() : '';
-            modalTipo.textContent = tipo === 'taller' ? 'Taller' : 'Curso';
-            modalTipo.className = 'modal-tipo badge-' + (tipo || 'curso');
-            modalCuerpo.innerHTML = detalle ? detalle.innerHTML : '';
+            if (modalTitulo) modalTitulo.textContent = titulo ? titulo.textContent.trim() : '';
+            if (modalTipo) {
+                modalTipo.textContent = tipo === 'taller' ? 'Taller' : 'Curso';
+                modalTipo.className = 'modal-tipo badge-' + tipo;
+            }
+            if (modalCuerpo) modalCuerpo.innerHTML = detalle ? detalle.innerHTML : '';
 
             ultimoBoton = boton || null;
             modal.hidden = false;

@@ -878,23 +878,19 @@
         /* Icono del contador de sesiones. */
         .li-sesiones::before { content: "\f5fd"; }
 
-        /* Marcador visible mientras no haya foto para esa temática. */
+        /* Marcador visible mientras no haya foto para esa temática.
+           El texto va dentro del elemento y no en un ::after, porque el filtro de
+           CKEditor borra los elementos vacíos al pegar el bloque en Drupal. */
         .img-pendiente {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 180px;
             width: 100%;
             background:
                 repeating-linear-gradient(45deg,
                     #f3f0ea 0 12px,
                     #e6e1d8 12px 24px);
-        }
-
-        .img-pendiente::after {
-            content: "Imagen pendiente";
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
             font-size: 0.75rem;
             font-weight: 600;
             letter-spacing: 1px;
@@ -1008,6 +1004,12 @@
         .modal-cerrar:focus-visible {
             background: var(--color-principal);
             color: #ffffff;
+        }
+
+        /* CKEditor envuelve el botón de cerrar en un <p> al pegar el bloque.
+           El botón está posicionado, así que ese párrafo solo estorba. */
+        .modal-caja > p {
+            margin: 0;
         }
 
         .modal-tipo {

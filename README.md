@@ -53,6 +53,34 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 
 ---
 
+## Qué le hace Drupal al bloque al pegarlo
+
+El campo de texto usa el filtro de CKEditor, que **reescribe el HTML**. Verificado
+contra la página publicada:
+
+| | Resultado |
+|---|---|
+| `<span></span>` vacío | **se borra** |
+| `<div></div>` vacío | sobrevive |
+| `<i class="fas ..."></i>` vacío | sobrevive |
+| `<script>` dentro del bloque | **se borra** (el JS va como librería del tema) |
+| `<button>` suelto | se envuelve en un `<p>` y le agrega `&nbsp;` |
+| `hidden`, `data-*`, `aria-*` | sobreviven |
+| `<img>` | le agrega `.lazyload` con `opacity: 0` |
+
+De ahí vienen dos decisiones del código:
+
+- **Ningún elemento que el JS necesite puede ir vacío.** `#modalProgramaTipo`,
+  `#modalProgramaTitulo`, `#modalProgramaCuerpo` y `.img-pendiente` llevan contenido
+  inicial que el JS reemplaza. Un `<span>` vacío desaparecía y rompía la modal entera.
+- **El JS comprueba cada nodo antes de usarlo.** Si el filtro vuelve a llevarse algo,
+  se pierde ese detalle pero la función sigue andando.
+
+`cargarImagenes()` existe por la última fila de la tabla: quita la clase `.lazyload`
+que Drupal le pone a las imágenes.
+
+---
+
 ## Paleta
 
 Tomada de [Pa'LanteU](https://palanteu.lovable.app). La página se mantiene en claro
