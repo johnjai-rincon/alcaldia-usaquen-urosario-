@@ -2,11 +2,31 @@
 
 **Portal:** 46379526 · **Form ID:** `6c27e8f3-027d-44d0-9a44-d9eb079b6b83` · **Región:** na1
 
-> **Por qué lo haces tú y no yo.** El conector de HubSpot de esta sesión reporta
+> **Por qué lo hiciste tú y no yo.** El conector de HubSpot de esta sesión reporta
 > `FORM: write = NOT_AVAILABLE`: puede leer propiedades de contacto, pero no editar
 > formularios ni crear propiedades. Todo lo de abajo está verificado cargando el
 > formulario real con su embed público, así que los campos y el orden son los de hoy,
 > no una suposición.
+
+> ## ✅ Estado al 30 de octubre de 2026: todo aplicado
+>
+> Verificado cargando el formulario real con su embed público. Los seis cambios están
+> hechos; esta guía queda como referencia de qué es cada campo y por qué se decidió así.
+>
+> | Cambio | Estado |
+> |---|---|
+> | Orden de los campos | ✅ personales → caracterización → programa |
+> | Desplegable de comunidad | ✅ `seleccionar_comunidad`, dependiente de "Sí" |
+> | Campo de modalidad | ✅ `modalidad`, con solo Presencial y Virtual |
+> | Etiqueta del soporte | ✅ "Soporte de servicio público o vínculo con la localidad" |
+> | Color del botón | ✅ `#d4212d` |
+> | Lista de programas | ✅ los 18 de AREAS TEMÁTICAS V2, con el título de la página |
+>
+> **Lo único por revisar:** el desplegable de comunidad separa `Negro`, `Mulato` y
+> `Afrodescendiente` en tres opciones, mientras que el DANE las agrupa en una sola
+> categoría. Si la Alcaldía pide el reporte de caracterización en formato DANE, hay que
+> sumar esas tres al consolidar. No es un error del formulario: es más granular que el
+> estándar, y eso solo se nota al reportar.
 
 **Dónde:** HubSpot → **Marketing** → **Captación de clientes potenciales** → **Formularios**
 → buscar "Alcaldía de Usaquén" → **Editar**.

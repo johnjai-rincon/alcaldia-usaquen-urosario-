@@ -97,8 +97,8 @@ marca, no el modo oscuro.
 
 `--color-verde` (`#25D366`) se queda: es el verde de WhatsApp, no de la marca.
 
-> El **formulario de HubSpot tiene su propio estilo** y sigue en el rosa anterior
-> (`#CA818F`). Se cambia dentro de HubSpot, no desde este CSS.
+> El **formulario de HubSpot tiene su propio estilo**, que se cambia dentro de HubSpot
+> y no desde este CSS. Ya está en `#d4212d`.
 
 ---
 
@@ -131,11 +131,11 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 ## Pendientes
 
 - [ ] Conseguir y subir las 12 imágenes (`Imagenes de los programas.md`)
-- [ ] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
-- [ ] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
+- [x] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
+- [x] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
 - [ ] Definir modalidad, horario y fechas de los 18 programas
 - [ ] Definir la metodología del curso de Fintech (es lo único que falta en el libro)
-- [ ] Sincronizar el desplegable de programas en HubSpot (`Formulario HubSpot - guia paso a paso.md`, paso 6)
+- [x] Sincronizar el desplegable de programas en HubSpot (`Formulario HubSpot - guia paso a paso.md`, paso 6)
 - [ ] Conseguir los PDF de contenido temático de los programas vigentes
 - [ ] Eliminar `orden-carrousel.js` y resolver la duplicación del JS
 
