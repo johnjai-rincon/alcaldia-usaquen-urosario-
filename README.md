@@ -131,7 +131,7 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 
 ## Pendientes
 
-- [ ] Descargar de Pexels y subir las 11 imágenes (`Imagenes de los programas.md`)
+- [ ] Subir a Drupal las 11 imágenes de `imagenes/` (ya descargadas y convertidas)
 - [x] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [x] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
 - [ ] Definir modalidad, horario y fechas de los 18 programas

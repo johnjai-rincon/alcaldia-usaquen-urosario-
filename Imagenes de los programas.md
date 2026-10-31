@@ -1,10 +1,18 @@
 # Imágenes de los programas
 
+> ## ✅ Ya están descargadas
+>
+> Las 11 están en la carpeta **`imagenes/`** de este repositorio, ya convertidas a
+> `.webp` y recortadas a 400 × 267. **Solo falta subirlas a Drupal.** Pesan 196 KB en
+> total, entre 9 y 27 KB cada una.
+>
+> El script que las baja y convierte quedó en `imagenes/_bajar_fotos.py`, por si hay que
+> rehacer alguna: recorta al centro conservando la proporción, sin deformar.
+
 Las 11 que faltan, todas en **Pexels**: descarga gratuita, **sin marca de agua**, uso
 comercial permitido y sin obligación de atribuir.
 
-Cada enlace abre la foto con su botón **Descargar** / *Free Download*. Elige el tamaño
-**Large** o **Original** y recorta a **400 × 267**.
+Cada enlace abre la foto en Pexels, por si quieres verla en grande o bajar otro tamaño.
 
 > **Licencia.** La Pexels License permite el uso comercial sin atribuir. Lo único que no
 > cubre es dar a entender que las personas de la foto respaldan el programa, que no es el
@@ -19,7 +27,7 @@ Hoy estas tarjetas muestran el marcador "Imagen pendiente".
 
 | # | Programa | Foto | Archivo |
 |---|---|---|---|
-| 1 | Diseño y comercialización de paquetes turísticos | [Atención en mostrador de viajes](https://www.pexels.com/photo/4907446/) | `curso-diseno-y-comercializacion-de-paquetes-turisticos.webp` |
+| 1 | Diseño y comercialización de paquetes turísticos | [Guía turistica con un grupo](https://www.pexels.com/photo/1096773/) | `curso-diseno-y-comercializacion-de-paquetes-turisticos.webp` |
 | 2 | Gestión de trámites ante INVIMA | [Operaria en planta de alimentos](https://www.pexels.com/photo/5953770/) | `curso-gestion-de-tramites-ante-invima.webp` |
 | 3 | Seguridad alimentaria en la práctica | [Manos con guante preparando alimento](https://www.pexels.com/photo/6232609/) | `curso-seguridad-alimentaria-en-la-practica.webp` |
 | 4 | Ventas efectivas para emprendimientos | [Tendero con delantal atendiendo](https://www.pexels.com/photo/8422712/) | `curso-ventas-efectivas-para-emprendimientos.webp` |
