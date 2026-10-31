@@ -45,7 +45,7 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 
 | Archivo | Contenido |
 |---|---|
-| `AREAS TEMÁTICAS V2.xlsx` | **La fuente de la oferta.** Hoja `AREAS TEMÁTICAS`: tema, tipo, título, objetivo, 4 unidades y metodología por programa. La hoja `AREAS TEMÁTICAS (2)` es una versión incompleta, con 2 unidades y la última fila vacía: **no usarla** |
+| `AREAS TEMÁTICAS V3 301026.xlsx` | **La fuente de la oferta.** Hoja `Áreas temáticas ajustadas`: tema, tipo, título, objetivo, 4 unidades y metodología por programa |
 | `Copia de Eventos Alcaldía Usaquen - Landing.xlsx` | Los **25 programas del portafolio anterior**, ya finalizados, con código Apolo |
 | `imagenes de los programas.docx` | Las 25 URLs de Shutterstock del portafolio anterior |
 | `Cambios a realizar.docx` | Los cambios pedidos por el cliente |
@@ -104,9 +104,10 @@ marca, no el modo oscuro.
 
 ## Los 18 programas
 
-12 cursos y 6 talleres, de la hoja `AREAS TEMÁTICAS`. Respecto al cronograma anterior,
-tres programas de analítica e IA se fundieron en uno, el de proveedores absorbió la
-analítica, y entraron "Tu negocio en un tablero" (era el *Adicional 5*) y el de Fintech. Las tarjetas se generan a
+14 cursos y 4 talleres, de la hoja `Áreas temáticas ajustadas`. Respecto a V2: servicio
+al cliente se fundió con proveedores, negociación empresarial con redes y pódcast,
+"Analítica de mercados para mipymes" se renombró, y entraron dos programas nuevos,
+"Fortalece tu mipyme" y "Power BI aplicado". Las tarjetas se generan a
 partir de esa hoja; los filtros separan por `data-tipo="curso|taller"` y cada tarjeta
 lleva `data-keywords` para que el buscador encuentre por tema y no solo por las palabras
 del título (sin eso, "turismo" no encuentra "paquetes turísticos").
@@ -130,12 +131,12 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 
 ## Pendientes
 
-- [ ] Conseguir y subir las 12 imágenes (`Imagenes de los programas.md`)
+- [ ] Elegir la foto de Power BI y subir las 11 imágenes (`Imagenes de los programas.md`)
 - [x] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [x] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
 - [ ] Definir modalidad, horario y fechas de los 18 programas
 - [ ] Definir la metodología del curso de Fintech (es lo único que falta en el libro)
-- [x] Sincronizar el desplegable de programas en HubSpot (`Formulario HubSpot - guia paso a paso.md`, paso 6)
+- [ ] Sincronizar el desplegable de programas con V3 (`Formulario HubSpot - guia paso a paso.md`, paso 6)
 - [ ] Conseguir los PDF de contenido temático de los programas vigentes
 - [ ] Eliminar `orden-carrousel.js` y resolver la duplicación del JS
 

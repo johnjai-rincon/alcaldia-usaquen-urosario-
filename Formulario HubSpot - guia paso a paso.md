@@ -8,10 +8,11 @@
 > formulario real con su embed público, así que los campos y el orden son los de hoy,
 > no una suposición.
 
-> ## ✅ Estado al 30 de octubre de 2026: todo aplicado
+> ## Estado al 31 de octubre de 2026
 >
-> Verificado cargando el formulario real con su embed público. Los seis cambios están
-> hechos; esta guía queda como referencia de qué es cada campo y por qué se decidió así.
+> Verificado cargando el formulario real con su embed público. Cinco de los seis
+> cambios siguen bien; **la lista de programas quedó desactualizada** al llegar
+> AREAS TEMÁTICAS V3 y hay que sincronizarla (paso 6).
 >
 > | Cambio | Estado |
 > |---|---|
@@ -20,7 +21,7 @@
 > | Campo de modalidad | ✅ `modalidad`, con solo Presencial y Virtual |
 > | Etiqueta del soporte | ✅ "Soporte de servicio público o vínculo con la localidad" |
 > | Color del botón | ✅ `#d4212d` |
-> | Lista de programas | ✅ los 18 de AREAS TEMÁTICAS V2, con el título de la página |
+> | Lista de programas | ⚠️ **por sincronizar con V3**: ver el paso 6 |
 >
 > **Lo único por revisar:** el desplegable de comunidad separa `Negro`, `Mulato` y
 > `Afrodescendiente` en tres opciones, mientras que el DANE las agrupa en una sola
@@ -187,71 +188,81 @@ aplique a todos los formularios de EDUCON de esta campaña, no solo a este.
 
 ---
 
-## Paso 6 — Actualizar la lista de programas (AREAS TEMÁTICAS V2)
+## Paso 6 — Sincronizar la lista de programas (AREAS TEMÁTICAS V3, 30/10/2026)
 
-La página ya quedó con los **18 programas de `AREAS TEMÁTICAS V2.xlsx`**. El desplegable
-`seleccione_el_programa_de_preferencia` todavía tiene la lista anterior, así que hay que
-sincronizarlo: **quitar 2, añadir 2 y renombrar 2**. Al final siguen siendo 18 opciones.
+La página ya quedó con los 18 programas de **V3**. El desplegable
+`seleccione_el_programa_de_preferencia` tiene los de **V2**, así que hay que
+**renombrar 3, quitar 2 y añadir 2**. Al final siguen siendo 18.
 
-> **No borres y vuelvas a crear la propiedad.** Los registros ya capturados guardan el
-> valor interno de la opción; si la eliminas, esos contactos quedan con un valor
-> huérfano y los informes dejan de cuadrar.
+> V3 no añade ni quita programas sueltos: **fusiona dos pares y renombra uno**, y entran
+> dos temas nuevos. Por eso conviene renombrar en vez de borrar y volver a crear: así los
+> contactos ya inscritos quedan en el programa que absorbió al suyo.
+
+### Renombrar 3 etiquetas
+
+Cambia **solo la etiqueta**, nunca el valor interno:
+
+| Etiqueta actual | Etiqueta nueva | Qué pasó |
+|---|---|---|
+| `Analítica de mercados para mipymes: identifica oportunidades y fortalece tu estrategia digital` | `Analítica de mercados: detecta oportunidades y toma decisiones con datos` | Solo cambia el nombre |
+| `Servicio al cliente y comunicación asertiva: atiende, resuelve y fideliza` | `Comunicación efectiva con clientes y proveedores: resuelve, negocia y decide con datos` | Absorbe el de proveedores |
+| `Negociación empresarial efectiva: prepara, argumenta y logra acuerdos` | `Negocia y promociona tu negocio: acuerdos comerciales, redes sociales y pódcast` | Absorbe el de redes y pódcast |
 
 ### Quitar 2 opciones
 
-Tres programas de analítica e IA se fundieron en uno solo. Estos dos dejan de existir:
+Son las que quedaron absorbidas por las dos fusiones de arriba:
 
-| Opción en el formulario | Por qué sale |
+| Opción | Se fue a |
 |---|---|
-| `Uso de la analítica de datos` | Fusionado en el programa de analítica + IA |
-| `Analítica de datos` | Fusionado en el programa de analítica + IA |
+| `Comunicación y negociación con proveedores basada en datos` | Comunicación efectiva con clientes y proveedores |
+| `Marketing en redes sociales y pódcast: crea contenido que conecta y promociona` | Negocia y promociona tu negocio |
 
-> HubSpot no deja borrar una opción que ya tenga registros sin reasignarlos. Si pasa,
-> la salida limpia es marcarlas como **ocultas / archivadas** en vez de eliminarlas: ya
-> no aparecen en el formulario pero el histórico se conserva. Antes de ocultarlas,
-> exporta los contactos que las tengan: son los que se inscribieron a esos dos cursos y
-> hay que avisarles del cambio.
+> Igual que la vez pasada: **exporta primero los contactos que tengan estas dos**. Son
+> quienes se inscribieron a esos cursos y hay que avisarles en cuál quedaron. Si HubSpot
+> no deja borrar la opción porque tiene registros, archívala en vez de eliminarla.
 
 ### Añadir 2 opciones
 
-| Nueva opción | Programa en la página |
+| Nueva opción | Tema en el documento |
 |---|---|
-| `Curso para el uso de herramientas digitales` | Tu negocio en un tablero: indicadores que impulsan productividad |
-| `Curso de FINTECH, billeteras digitales, banca digital y pagos digitales` | Fintech y pagos digitales: domina las herramientas de la nueva economía financiera |
+| `Fortalece tu mipyme: gestión comercial y marketing digital para crecer` | Fortalecimiento a pymes y mipymes que incluya marketing digital |
+| `Power BI aplicado: transforma datos en indicadores y tableros para decidir` | Power BI - Business Intelligence y Big Data |
 
-El de herramientas digitales ya existía en el cronograma anterior como *Adicional 5*,
-fuera de la numeración; ahora entra como programa formal.
+### Las 13 que no se tocan
 
-### Renombrar 2 etiquetas
+Costos y branding con IA · Paquetes turísticos · Innovación y emprendimiento con IA ·
+INVIMA · Seguridad alimentaria · Analítica de datos e IA · Empleabilidad digital con IA ·
+Ventas efectivas · Negociación comercial local e internacional · Analítica para proyectos ·
+Marketing digital aplicado · Tu negocio en un tablero · Fintech y pagos digitales.
 
-Cambia **solo la etiqueta**, no el valor interno, para no romper lo ya capturado:
+> **Cuidado con dos pares que se parecen pero son distintos:**
+> *Tu negocio en un tablero* y *Power BI aplicado* son ambos de tableros — el primero es
+> para pequeños negocios, el segundo es la herramienta a fondo (Power Query, DAX).
+> Y *Marketing digital aplicado* convive con *Fortalece tu mipyme*, que también lleva
+> marketing pero enfocado al crecimiento de la mipyme.
 
-| Etiqueta actual | Etiqueta nueva |
-|---|---|
-| `Técnicas de comunicación con proveedores` | `Técnicas de comunicación con proveedores y uso de analítica de datos` |
-| `Inteligencia artificial y el uso de herramientas actuales` | `Analítica de datos e inteligencia artificial y uso de herramientas actuales` |
+### La lista final, en el orden de la página
 
-La segunda es la que absorbe los dos programas retirados: conviene que sea esa la que
-sobreviva, porque es la que ya tiene registros de los tres temas.
-
-### Las 14 que no se tocan
-
-Habilidades empresariales · Servicio al cliente · Paquetes turísticos · IA, innovación y
-emprendimiento · Negociaciones empresariales · Marketing en redes y pódcast · INVIMA ·
-Seguridad alimentaria · Uso de plataformas e IA · Fortalecer emprendimientos · Analítica
-para mercados · Taller de negociación · Analítica para programas y proyectos ·
-Marketing digital.
-
-> Ojo con no confundirlas: **tres programas de analítica sobreviven** y son distintos
-> entre sí — el de mercados para mipymes, el de programas y proyectos, y el fusionado de
-> analítica + IA. Solo se retiran los dos primeros de la tabla de arriba.
-
-### Y sigue pendiente lo de antes
-
-Las etiquetas del desplegable usan el *Tema principal* del documento, mientras que la
-página usa el *Título propuesto*. Siguen sin parecerse en varios casos, así que la
-recomendación del principio no cambia: pasar las etiquetas al título que ve el usuario
-en la página, conservando los valores internos.
+```
+ 1. Costos, presupuestos y branding con IA: habilidades para gestionar tu negocio
+ 2. Comunicación efectiva con clientes y proveedores: resuelve, negocia y decide con datos
+ 3. Diseño y comercialización de paquetes turísticos: crea experiencias y alianzas
+ 4. Innovación y emprendimiento con IA: identifica oportunidades y desarrolla soluciones
+ 5. Negocia y promociona tu negocio: acuerdos comerciales, redes sociales y pódcast
+ 6. Gestión de trámites ante INVIMA: prepara requisitos para comercializar productos
+ 7. Seguridad alimentaria en la práctica: manipula, previene riesgos y elabora alimentos seguros
+ 8. Analítica de datos e inteligencia artificial aplicada al trabajo
+ 9. Empleabilidad digital con IA: construye y comunica tu perfil profesional
+10. Ventas efectivas para emprendimientos: conecta con clientes y cierra negocios
+11. Analítica de mercados: detecta oportunidades y toma decisiones con datos
+12. Fortalece tu mipyme: gestión comercial y marketing digital para crecer
+13. Negociación comercial local e internacional: desarrolla acuerdos en distintos mercados
+14. Analítica de datos para gestionar proyectos: monitorea indicadores y mejora decisiones
+15. Marketing digital aplicado: planifica campañas, atrae clientes y mide resultados
+16. Tu negocio en un tablero: indicadores que impulsan productividad
+17. Power BI aplicado: transforma datos en indicadores y tableros para decidir
+18. Fintech y pagos digitales: domina las herramientas de la nueva economía financiera
+```
 
 ---
 
