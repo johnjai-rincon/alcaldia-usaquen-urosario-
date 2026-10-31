@@ -882,9 +882,6 @@
             color: #ffffff;
         }
 
-        /* Icono del contador de sesiones. */
-        .li-sesiones::before { content: "\f5fd"; }
-
         /* Marcador visible mientras no haya foto para esa temática.
            El texto va dentro del elemento y no en un ::after, porque el filtro de
            CKEditor borra los elementos vacíos al pegar el bloque en Drupal. */

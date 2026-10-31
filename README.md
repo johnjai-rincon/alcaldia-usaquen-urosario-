@@ -116,8 +116,13 @@ la metodología del programa, tomadas de las columnas E, F, G y H de la hoja
 el buscador de la página también encuentre por el nombre de una unidad.
 
 **Lo que el cronograma no trae:** modalidad y horario están como "PD" (por definir), así
-que las tarjetas dicen "Modalidad por definir" y "Fechas por definir". Lo único firme es
-el número de sesiones: 12 por curso, 8 por taller.
+que las tarjetas dicen "Modalidad por definir" y "Fechas por definir".
+
+Tampoco trae **horas ni número de sesiones**: no existe ese campo en ninguna hoja.
+Contar las marcas del Gantt da 12 por curso y 8 por taller, pero es una inferencia
+sobre una propuesta con el horario sin definir, así que ese dato **no se publica** en
+las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoja
+`Propuesta curricular`, que se ven en la modal.
 
 ---
 
