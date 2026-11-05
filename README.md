@@ -45,7 +45,7 @@ dentro de la página. Por eso las rutas de imágenes y PDF apuntan a
 
 | Archivo | Contenido |
 |---|---|
-| `AREAS TEMÁTICAS V3 301026.xlsx` | **La fuente de la oferta.** Hoja `Áreas temáticas ajustadas`: tema, tipo, título, objetivo, 4 unidades y metodología por programa |
+| `AREAS TEMÁTICAS V3 301026 (4).xlsx` | **La fuente de la oferta.** Hoja `Áreas temáticas ajustadas`: tema, tipo, fechas, modalidad, horario, título, objetivo, 4 unidades y metodología por programa |
 | `Copia de Eventos Alcaldía Usaquen - Landing.xlsx` | Los **25 programas del portafolio anterior**, ya finalizados, con código Apolo |
 | `imagenes de los programas.docx` | Las 25 URLs de Shutterstock del portafolio anterior |
 | `Cambios a realizar.docx` | Los cambios pedidos por el cliente |
@@ -118,8 +118,11 @@ la metodología del programa, tomadas de las columnas E, F, G y H de la hoja
 (oculto por CSS, no por `hidden`) para que lo lean buscadores y asistentes, y para que
 el buscador de la página también encuentre por el nombre de una unidad.
 
-**Lo que el cronograma no trae:** modalidad y horario están como "PD" (por definir), así
-que las tarjetas dicen "Modalidad por definir" y "Fechas por definir".
+**Fechas, modalidad y horario** salen de las columnas E a H y se normalizan en el
+generador, no en el Excel, que es del cliente: la modalidad viene como `virutal` e
+`hibrido`, y el horario mezcla ` sab 8-12 Presencial` con `6:00 - 8:00 p.m`. Las fechas
+se publican con un único formato, `Del 17 de noviembre al 14 de diciembre de 2026`.
+Cada dato va en su propia línea de la tarjeta.
 
 Tampoco trae **horas ni número de sesiones**: no existe ese campo en ninguna hoja.
 Contar las marcas del Gantt da 12 por curso y 8 por taller, pero es una inferencia
@@ -135,7 +138,7 @@ las tarjetas. Lo único confirmado por programa son las **4 unidades** de la hoj
 - [ ] Reemplazar la foto de "Fortalece tu mipyme": tiene texto quemado en inglés
 - [x] Aplicar los cambios del formulario (`Formulario HubSpot - guia paso a paso.md`)
 - [x] Cambiar el color del botón del formulario en HubSpot a `#d4212d`
-- [ ] Definir modalidad, horario y fechas de los 18 programas
+- [x] Definir modalidad, horario y fechas de los 18 programas
 - [ ] Definir la metodología del curso de Fintech (es lo único que falta en el libro)
 - [ ] Sincronizar el desplegable de programas con V3 (`Formulario HubSpot - guia paso a paso.md`, paso 6)
 - [ ] Conseguir los PDF de contenido temático de los programas vigentes
